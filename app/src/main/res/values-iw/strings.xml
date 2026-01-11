@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ETravelApp</string>
+    <string name="home_welcome">ברוך הבא,</string>
+    <string name="home_popular_destinations">יעדים  פופולריים</string>
+    <string name="home_explore_destinations">גלה יעדים</string>
+    <string name="nav_home">בית</string>
+    <string name="nav_favorites">מועדפים</string>
+    <string name="nav_profile">פרופיל</string>
+</resources>

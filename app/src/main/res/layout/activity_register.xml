@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@drawable/background"
+        android:layoutDirection="ltr">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="ltr"
+            android:padding="@dimen/register_container_padding">
+
+            <!-- White Card Container -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/register_card_margin"
+                android:layout_marginBottom="@dimen/register_card_margin"
+                app:cardCornerRadius="@dimen/register_card_corner_radius"
+                app:cardElevation="@dimen/register_card_elevation"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="ltr"
+                    android:padding="@dimen/register_form_padding">
+
+                    <!-- Sign Up Title at Top -->
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/register_LBL_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/register_title_marginTop"
+                        android:gravity="center_horizontal"
+                        android:text="@string/register_title"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="@dimen/register_title_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- Planet Icon -->
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/register_IMG_icon"
+                        android:layout_width="@dimen/register_ic_size"
+                        android:layout_height="@dimen/register_ic_size"
+                        android:layout_marginTop="@dimen/register_ic_padding"
+                        android:padding="@dimen/ic_padding"
+                        android:src="@drawable/ic_plane"
+                        android:contentDescription="@null"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/register_LBL_title" />
+
+                    <!-- Subtitle -->
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/register_LBL_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/register_subtitle_marginTop"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/register_subtitle"
+                        android:textColor="#5A7A99"
+                        android:textSize="@dimen/register_subtitle_text_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/register_IMG_icon" />
+
+                    <!-- Username Card -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/register_CARD_username"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/register_card_marginTop"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/register_field_corner_radius"
+                        app:cardElevation="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/register_LBL_subtitle">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:layoutDirection="ltr"
+                            android:orientation="vertical"
+                            android:padding="@dimen/register_field_padding">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:gravity="start"
+                                android:text="Username"
+                                android:textColor="#1E3A5F"
+                                android:textDirection="ltr"
+                                android:textSize="@dimen/username_text_size"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:layoutDirection="ltr">
+
+                                <EditText
+                                    android:id="@+id/register_ET_username"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_toStartOf="@id/register_IMG_usernameIcon"
+                                    android:background="@null"
+                                    android:gravity="start"
+                                    android:hint="Enter your username"
+                                    android:inputType="text"
+                                    android:textColor="#1E3A5F"
+                                    android:textColorHint="#B0BEC5"
+                                    android:textDirection="ltr"
+                                    android:textSize="@dimen/username_example_text_size" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/register_IMG_usernameIcon"
+                                    android:layout_width="@dimen/username_ic_size"
+                                    android:layout_height="@dimen/username_ic_size"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:contentDescription="@null"
+                                    android:src="@drawable/ic_user"
+                                    android:tint="#5A7A99" />
+                            </RelativeLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Email Card -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/register_CARD_email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/register_card_marginTop"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/register_field_corner_radius"
+                        app:cardElevation="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/register_CARD_username">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:layoutDirection="ltr"
+                            android:orientation="vertical"
+                            android:padding="@dimen/register_field_padding">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:gravity="start"
+                                android:text="@string/email_label"
+                                android:textColor="#1E3A5F"
+                                android:textDirection="ltr"
+                                android:textSize="@dimen/email_text_size"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:layoutDirection="ltr">
+
+                                <EditText
+                                    android:id="@+id/register_ET_email"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_toStartOf="@id/register_IMG_emailIcon"
+                                    android:background="@null"
+                                    android:gravity="start"
+                                    android:hint="Enter your email address"
+                                    android:inputType="textEmailAddress"
+                                    android:textColor="#1E3A5F"
+                                    android:textColorHint="#B0BEC5"
+                                    android:textDirection="ltr"
+                                    android:textSize="15sp" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/register_IMG_emailIcon"
+                                    android:layout_width="@dimen/email_ic_size"
+                                    android:layout_height="@dimen/email_ic_size"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:contentDescription="@null"
+                                    android:src="@drawable/ic_email"
+                                    android:tint="#5A7A99" />
+                            </RelativeLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Password Card -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/register_CARD_password"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/register_card_marginTop"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="@dimen/register_field_corner_radius"
+                        app:cardElevation="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/register_CARD_email">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:layoutDirection="ltr"
+                            android:orientation="vertical"
+                            android:padding="@dimen/register_field_padding">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:gravity="start"
+                                android:text="@string/login_label_password"
+                                android:textColor="#1E3A5F"
+                                android:textDirection="ltr"
+                                android:textSize="@dimen/password_text_size"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:layoutDirection="ltr">
+
+                                <EditText
+                                    android:id="@+id/register_ET_password"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_toStartOf="@id/register_IMG_togglePassword"
+                                    android:background="@null"
+                                    android:gravity="start"
+                                    android:hint="@string/login_hint_password"
+                                    android:inputType="textPassword"
+                                    android:textColor="#1E3A5F"
+                                    android:textColorHint="#B0BEC5"
+                                    android:textDirection="ltr"
+                                    android:textSize="@dimen/password_text_size" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/register_IMG_togglePassword"
+                                    android:layout_width="@dimen/register_password_size"
+                                    android:layout_height="@dimen/register_password_size"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:clickable="true"
+                                    android:contentDescription="@null"
+                                    android:src="@drawable/ic_eye_close"
+                                    android:tint="#5A7A99" />
+                            </RelativeLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Confirm Password Card -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardConfirmPassword"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/register_card_marginTop"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/register_card_corner_radius"
+                        app:cardElevation="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/register_CARD_password">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:layoutDirection="ltr"
+                            android:orientation="vertical"
+                            android:padding="@dimen/register_field_padding">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:gravity="start"
+                                android:text="@string/confirm_password_label"
+                                android:textColor="#1E3A5F"
+                                android:textDirection="ltr"
+                                android:textSize="@dimen/password_text_size"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:layoutDirection="ltr">
+
+                                <EditText
+                                    android:id="@+id/register_ET_confirmPassword"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_toStartOf="@id/register_IMG_toggleConfirmPassword"
+                                    android:background="@null"
+                                    android:gravity="start"
+                                    android:hint="@string/confirm_your_password"
+                                    android:inputType="textPassword"
+                                    android:textColor="#1E3A5F"
+                                    android:textColorHint="#B0BEC5"
+                                    android:textDirection="ltr"
+                                    android:textSize="@dimen/confirm_password_text_size" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/register_IMG_toggleConfirmPassword"
+                                    android:layout_width="@dimen/confirm_size"
+                                    android:layout_height="@dimen/confirm_size"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:clickable="true"
+                                    android:contentDescription="@null"
+                                    android:src="@drawable/ic_eye_close"
+                                    android:tint="#5A7A99" />
+                            </RelativeLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Sign Up Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/register_BTN_submit"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/register_btn_size"
+                        android:layout_marginTop="@dimen/register_btn_marginTop"
+                        android:text="@string/sign_up_label"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sign_up_button_text_size"
+                        android:textStyle="bold"
+                        app:backgroundTint="#2D5F8D"
+                        app:cornerRadius="@dimen/sign_up_button_corner_radius"
+                        app:elevation="4dp"
+                        app:iconGravity="end"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cardConfirmPassword" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <FrameLayout
+        android:id="@+id/register_OVERLAY_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/register_LOTTIE_loading"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            app:lottie_rawRes="@raw/loading_text"
+            app:lottie_loop="true"/>
+    </FrameLayout>
+
+</FrameLayout>
