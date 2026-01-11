@@ -1,9 +1,12 @@
 package com.example.etravelapp.model
 
 import java.io.Serializable
+import com.example.etravelapp.utilities.DestinationType
+
 
 
 data class DestinationItem(
+    var id: String = "",
     var poster: String,
     var city: String,
     var country: String,
@@ -14,10 +17,12 @@ data class DestinationItem(
     var avgCostPerDay: String = "",
     var language: String = "",
     var flightPrice: Int = 0,
-    var isFavorite: Boolean = false
+    var isFavorite: Boolean = false,
+    var sourceType: DestinationType = DestinationType.EXPLORE
 ) : Serializable{
 
     constructor() : this(
+        id = "",
         poster = "",
         city = "",
         country = "",
@@ -34,6 +39,7 @@ data class DestinationItem(
     fun toggleFavorite() = apply { isFavorite = !isFavorite }
 
     class Builder(
+        private var id: String = "",
         private var poster: String = "",
         private var city: String = "",
         private var country: String = "",
@@ -46,6 +52,7 @@ data class DestinationItem(
         private var flightPrice: Int = 0,
         private var isFavorite: Boolean = false
     ) {
+        fun id(id: String) = apply { this.id = id }
         fun poster(poster: String) = apply { this.poster = poster }
         fun city(city: String) = apply { this.city = city }
         fun country(country: String) = apply { this.country = country }
@@ -60,6 +67,7 @@ data class DestinationItem(
 
         fun build(): DestinationItem {
             return DestinationItem(
+                id = id,
                 poster = poster,
                 city = city,
                 country = country,

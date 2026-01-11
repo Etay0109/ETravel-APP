@@ -677,7 +677,7 @@
             android:layout_width="180dp"
             android:layout_height="180dp"
             android:layout_gravity="center"
-            app:lottie_rawRes="@raw/loading_text"
+            app:lottie_rawRes="@raw/loading_booking"
             app:lottie_loop="true" />
 
     </FrameLayout>

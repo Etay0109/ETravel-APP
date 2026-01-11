@@ -10,6 +10,7 @@ object DestinationDataManager {
 
         destinations.add(
             DestinationItem.Builder()
+                .id("Paris")
                 .city("Paris")
                 .country("France")
                 .poster("https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
@@ -50,6 +51,7 @@ object DestinationDataManager {
 
         destinations.add(
             DestinationItem.Builder()
+                .id("London")
                 .city("London")
                 .country("United Kingdom")
                 .poster("https://images.unsplash.com/photo-1569865867048-34cfce8d58fe?q=80&w=756&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
@@ -90,6 +92,7 @@ object DestinationDataManager {
 
         destinations.add(
             DestinationItem.Builder()
+                .id("Rome")
                 .city("Rome")
                 .country("Italy")
                 .poster("https://images.unsplash.com/photo-1645649644176-275e96b2af7f?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
@@ -130,6 +133,7 @@ object DestinationDataManager {
 
         destinations.add(
             DestinationItem.Builder()
+                .id("New York")
                 .city("New York")
                 .country("USA")
                 .poster("https://images.unsplash.com/photo-1527267207156-3372670819dc?q=80&w=776&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
@@ -170,6 +174,7 @@ object DestinationDataManager {
 
         destinations.add(
             DestinationItem.Builder()
+                .id("Tokyo")
                 .city("Tokyo")
                 .country("Japan")
                 .poster("https://plus.unsplash.com/premium_photo-1722872944372-3fac47ddb569?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
@@ -216,6 +221,7 @@ object DestinationDataManager {
 
         destinations.add(
             DestinationItem.Builder()
+                .id("Barcelona")
                 .city("Barcelona")
                 .country("Spain")
                 .poster("https://images.unsplash.com/photo-1559329591-1c7ce35fc8a2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
@@ -256,6 +262,7 @@ object DestinationDataManager {
 
         destinations.add(
             DestinationItem.Builder()
+                .id("Dubai")
                 .city("Dubai")
                 .country("United Arab Emirates")
                 .poster("https://images.unsplash.com/photo-1634007626524-f47fa37810a7?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
@@ -296,6 +303,7 @@ object DestinationDataManager {
 
         destinations.add(
             DestinationItem.Builder()
+                .id("Athens")
                 .city("Athens")
                 .country("Greece")
                 .poster("https://images.unsplash.com/photo-1668093375941-ccfe6c34c89c?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
@@ -336,6 +344,7 @@ object DestinationDataManager {
 
         destinations.add(
             DestinationItem.Builder()
+                .id("Berlin")
                 .city("Berlin")
                 .country("Germany")
                 .poster("https://images.unsplash.com/photo-1566404791232-af9fe0ae8f8b?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
@@ -376,6 +385,7 @@ object DestinationDataManager {
 
         destinations.add(
             DestinationItem.Builder()
+                .id("Bangkok")
                 .city("Bangkok")
                 .country("Thailand")
                 .poster("https://plus.unsplash.com/premium_photo-1693238111767-c6b47ba92f40?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")

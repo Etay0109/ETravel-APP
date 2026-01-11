@@ -53,10 +53,15 @@ class HomeFragment : Fragment() {
 
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    override fun onResume() {
+        super.onResume()
+
+        val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return
+        setupPopularRecycler(uid)
+        setupExploreRecycler(uid)
     }
+
+
 
     private fun setupPopularRecycler(uid: String) {
         binding.homeRVPopular.layoutManager =
@@ -78,7 +83,7 @@ class HomeFragment : Fragment() {
                 FirebaseDestinationManager.updateUserFavorite(
                     uid,
                     DestinationType.POPULAR,
-                    position,
+                    destination.id,
                     destination.isFavorite
                 )
                 popularAdapter.notifyItemChanged(position)
@@ -116,7 +121,7 @@ class HomeFragment : Fragment() {
                 FirebaseDestinationManager.updateUserFavorite(
                     uid,
                     DestinationType.EXPLORE,
-                    position,
+                    destination.id,
                     destination.isFavorite
                 )
 
@@ -162,6 +167,11 @@ class HomeFragment : Fragment() {
                 setupExploreRecycler(uid)
             }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
 

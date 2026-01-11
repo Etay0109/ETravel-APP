@@ -74,6 +74,10 @@ class ExploreDestinationsAdapter(
         notifyDataSetChanged()
     }
 
+    fun removeItem(position: Int) {
+        destinations.removeAt(position)
+        notifyItemRemoved(position)
+    }
 
     inner class ExploreViewHolder(
         val binding: ItemExploreDestinationBinding

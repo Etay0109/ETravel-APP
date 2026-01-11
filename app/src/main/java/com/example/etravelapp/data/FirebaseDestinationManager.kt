@@ -34,7 +34,7 @@ object FirebaseDestinationManager {
     fun updateUserFavorite( //Saving the user's favorite destinations
         uid: String,
         type: DestinationType,
-        position: Int,
+        destinationId: String,
         isFavorite: Boolean
     ) {
         database
@@ -42,14 +42,15 @@ object FirebaseDestinationManager {
             .child(uid)
             .child("favorites")
             .child(type.name.lowercase())
-            .child(position.toString())
+            .child(destinationId)
             .setValue(isFavorite)
     }
+
 
     fun getUserFavorites(   //Getting the user's favorite destinations
         uid: String,
         type: DestinationType,
-        onResult: (Map<Int, Boolean>) -> Unit
+        onResult: (Map<String, Boolean>) -> Unit
     ) {
         database
             .getReference("users")
@@ -59,10 +60,10 @@ object FirebaseDestinationManager {
             .get()
             .addOnSuccessListener { snapshot ->
 
-                val map = mutableMapOf<Int, Boolean>()
+                val map = mutableMapOf<String, Boolean>()
 
                 snapshot.children.forEach {
-                    val key = it.key?.toIntOrNull()
+                    val key = it.key          // destinationId
                     val value = it.getValue(Boolean::class.java)
 
                     if (key != null && value != null) {
@@ -73,6 +74,7 @@ object FirebaseDestinationManager {
                 onResult(map)
             }
     }
+
 
     fun getDestinations(
         type: DestinationType,
@@ -96,8 +98,9 @@ object FirebaseDestinationManager {
 
             getUserFavorites(uid, type) { favorites ->
 
-                for (i in destinations.indices) {
-                    destinations[i].isFavorite = favorites[i] == true
+                for (destination in destinations) {
+                    destination.sourceType = type
+                    destination.isFavorite = favorites[destination.id] == true
                 }
 
                 onResult(destinations)
