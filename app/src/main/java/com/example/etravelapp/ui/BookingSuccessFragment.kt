@@ -12,7 +12,6 @@ import com.example.etravelapp.model.DestinationItem
 
 class BookingSuccessFragment : Fragment() {
 
-    // ViewBinding reference
     private var _binding: FragmentBookingSuccessBinding? = null
     private val binding get() = _binding!!
 
