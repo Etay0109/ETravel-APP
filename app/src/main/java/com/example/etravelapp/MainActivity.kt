@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.etravelapp.databinding.ActivityMainBinding
 import com.example.etravelapp.ui.FavoritesFragment
 import com.example.etravelapp.ui.HomeFragment
+import com.example.etravelapp.ui.ProfileFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,6 +36,13 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_favorites -> {
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.main_LAY_container, FavoritesFragment())
+                        .commit()
+                    true
+                }
+
+                R.id.nav_profile -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.main_LAY_container, ProfileFragment())
                         .commit()
                     true
                 }

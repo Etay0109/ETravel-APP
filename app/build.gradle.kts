@@ -72,6 +72,9 @@ dependencies {
     //Realtime DB:
     implementation(libs.firebase.database)
 
+    //Storage:
+    implementation(libs.firebase.storage)
+
 
 
 }
