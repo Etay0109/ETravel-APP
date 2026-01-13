@@ -15,10 +15,7 @@ class ExploreDestinationsAdapter(
 
     var destinationCallback: DestinationCallback? = null
 
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): ExploreViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExploreViewHolder {
         val binding = ItemExploreDestinationBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
@@ -27,17 +24,14 @@ class ExploreDestinationsAdapter(
         return ExploreViewHolder(binding)
     }
 
-    override fun onBindViewHolder(
-        holder: ExploreViewHolder,
-        position: Int
-    ) {
+    override fun onBindViewHolder(holder: ExploreViewHolder, position: Int) {
+
         val destination = destinations[position]
 
         with(holder.binding) {
             itemExploreLBLName.text = destination.city
             itemExploreLBLCountry.text = destination.country
-            itemExploreLBLFlightTime.text =
-                destination.flightTime ?: ""
+            itemExploreLBLFlightTime.text = destination.flightTime ?: ""
 
             ImageLoader.getInstance().loadImage(
                 destination.poster,
@@ -52,29 +46,38 @@ class ExploreDestinationsAdapter(
             )
 
             itemExploreIMGFavorite.setOnClickListener {
+                val adapterPos = holder.bindingAdapterPosition
+                if (adapterPos == RecyclerView.NO_POSITION) return@setOnClickListener
+
+                val clicked = destinations[adapterPos]
+
                 destinationCallback?.favoriteClicked(
-                    destination,
-                    position,
-                    DestinationType.EXPLORE
+                    clicked,
+                    adapterPos,
+                    clicked.sourceType ?: DestinationType.EXPLORE
                 )
             }
 
-
             root.setOnClickListener {
-                destinationCallback?.destinationClicked(destination)
+                val adapterPos = holder.bindingAdapterPosition
+                if (adapterPos == RecyclerView.NO_POSITION) return@setOnClickListener
+
+                val clicked = destinations[adapterPos]
+                destinationCallback?.destinationClicked(clicked)
             }
         }
     }
 
     override fun getItemCount(): Int = destinations.size
 
-    fun updateData(newList: List<DestinationItem>) {  // Replace the current list with new data and update the UI
+    fun updateData(newList: List<DestinationItem>) {
         destinations.clear()
         destinations.addAll(newList)
         notifyDataSetChanged()
     }
 
     fun removeItem(position: Int) {
+        if (position < 0 || position >= destinations.size) return
         destinations.removeAt(position)
         notifyItemRemoved(position)
     }
