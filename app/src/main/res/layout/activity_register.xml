@@ -45,13 +45,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/register_title_marginTop"
-                        android:gravity="center_horizontal"
                         android:text="@string/register_title"
                         android:textColor="@color/primary_text_color"
                         android:textSize="@dimen/register_title_text_size"
                         android:textStyle="bold"
+                        android:textAlignment="center"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintEnd_toEndOf="parent" />
+
 
                     <!-- Planet Icon -->
                     <androidx.appcompat.widget.AppCompatImageView

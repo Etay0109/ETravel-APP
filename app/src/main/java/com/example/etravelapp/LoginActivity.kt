@@ -34,8 +34,11 @@ class LoginActivity : AppCompatActivity() {
                     val account = task.getResult(Exception::class.java)
                     firebaseAuthWithGoogle(account.idToken!!)
                 } catch (e: Exception) {
+                    splashManager.stop()
                     SignalManager.getInstance().toast("Google sign-in canceled")
                 }
+            } else {
+                splashManager.stop()
             }
         }
 
@@ -116,8 +119,8 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
-    // Click on the Google sign-in button
-    private fun signInWithGoogle() {
+    private fun signInWithGoogle() {    // Click on the Google sign-in button
+        splashManager.start()
         val signInIntent = googleSignInClient.signInIntent
         googleSignInLauncher.launch(signInIntent)
     }
@@ -128,6 +131,7 @@ class LoginActivity : AppCompatActivity() {
         val credential = GoogleAuthProvider.getCredential(idToken, null)
         auth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
+                splashManager.stop()
                 if (task.isSuccessful) {
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()

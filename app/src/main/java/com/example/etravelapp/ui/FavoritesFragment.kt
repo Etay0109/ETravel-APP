@@ -28,7 +28,6 @@ class FavoritesFragment : Fragment() {
         _binding = FragmentFavoritesBinding.inflate(inflater, container, false)
 
         setupRecyclerView()
-        loadFavorites()
 
         return binding.root
     }
@@ -66,12 +65,19 @@ class FavoritesFragment : Fragment() {
 
                     favoritesAdapter.removeItem(position)
 
+                    val b = _binding ?: return
                     if (favoritesAdapter.itemCount == 0) {
-                        binding.favoritesLAYEmpty.visibility = View.VISIBLE
-                        binding.favoritesRVList.visibility = View.GONE
+                        b.favoritesLAYEmpty.visibility = View.VISIBLE
+                        b.favoritesRVList.visibility = View.GONE
                     }
+
                 }
             }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        loadFavorites()
     }
 
     private fun loadFavorites() {
@@ -103,6 +109,7 @@ class FavoritesFragment : Fragment() {
                         .onEach { it.sourceType = DestinationType.POPULAR }
                 )
 
+                val b = _binding ?: return@getDestinationsWithUserFavorites
                 updateUI(allFavorites)
                 favoritesAdapter.updateData(allFavorites)
             }
@@ -110,14 +117,17 @@ class FavoritesFragment : Fragment() {
     }
 
     private fun updateUI(favorites: List<DestinationItem>) {
+        val b = _binding ?: return
+
         if (favorites.isEmpty()) {
-            binding.favoritesLAYEmpty.visibility = View.VISIBLE
-            binding.favoritesRVList.visibility = View.GONE
+            b.favoritesLAYEmpty.visibility = View.VISIBLE
+            b.favoritesRVList.visibility = View.GONE
         } else {
-            binding.favoritesLAYEmpty.visibility = View.GONE
-            binding.favoritesRVList.visibility = View.VISIBLE
+            b.favoritesLAYEmpty.visibility = View.GONE
+            b.favoritesRVList.visibility = View.VISIBLE
         }
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

@@ -44,7 +44,9 @@ class ProfileFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentProfileBinding.inflate(inflater, container, false)
+        _binding = FragmentProfileBinding.inflate(inflater,
+            container,
+            false)
         return binding.root
     }
 
@@ -76,7 +78,7 @@ class ProfileFragment : Fragment() {
     }
 
 
-    private fun loadProfileImage() {
+    private fun loadProfileImage() {    // Load the user's profile image from Firebase Storage
         val uid = auth.currentUser?.uid ?: return
 
         val imageRef = storage.reference.child("profile_images/$uid")
@@ -87,7 +89,7 @@ class ProfileFragment : Fragment() {
         }
     }
 
-    private fun uploadProfileImage(imageUri: Uri) {
+    private fun uploadProfileImage(imageUri: Uri) { // Upload a new profile image
         val uid = auth.currentUser?.uid ?: return
         val imageRef = storage.reference.child("profile_images/$uid")
 
@@ -98,7 +100,7 @@ class ProfileFragment : Fragment() {
     }
 
 
-    private fun uploadUserDocument(fileUri: Uri) {
+    private fun uploadUserDocument(fileUri: Uri) {  // Uploads a document to Firebase Storage
         val uid = auth.currentUser?.uid ?: return
         val fileName = fileUri.lastPathSegment ?: "document"
 
@@ -115,7 +117,7 @@ class ProfileFragment : Fragment() {
             }
     }
 
-    private fun loadUserDocuments() {
+    private fun loadUserDocuments() {   // Loads all user documents from Firebase Storage
         val uid = auth.currentUser?.uid ?: return
         val docsRef = storage.reference.child("user_documents/$uid")
 
@@ -127,7 +129,7 @@ class ProfileFragment : Fragment() {
         }
     }
 
-    private fun addDocumentCard(fileRef: StorageReference) {
+    private fun addDocumentCard(fileRef: StorageReference) {    // Creates and displays a card for a single document
 
         val itemBinding = ItemDocumentCardBinding.inflate(
             layoutInflater,
@@ -152,7 +154,7 @@ class ProfileFragment : Fragment() {
     }
 
 
-    private fun deleteFile(fileRef: StorageReference) {
+    private fun deleteFile(fileRef: StorageReference) { // Deletes a document from Firebase Storage and updates the UI
         fileRef.delete()
             .addOnSuccessListener {
                 SignalManager.getInstance().toast("File deleted successfully")
