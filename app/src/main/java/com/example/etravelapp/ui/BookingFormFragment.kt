@@ -22,6 +22,11 @@ import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
+import com.example.etravelapp.model.Booking
+
+
 
 
 class BookingFormFragment : Fragment() {
@@ -39,9 +44,15 @@ class BookingFormFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        destination =
-            arguments?.getSerializable("destination") as DestinationItem
+        val args = arguments
+        if (args != null && args.containsKey("destination")) {
+            destination = args.getSerializable("destination") as DestinationItem
+        } else {
+            SignalManager.getInstance().toast("Invalid destination")
+            parentFragmentManager.popBackStack()
+        }
     }
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -66,7 +77,8 @@ class BookingFormFragment : Fragment() {
     }
 
 
-    private fun bindSummaryData() {
+
+    private fun bindSummaryData() { // Displays the selected destination and flight price on the screen
         binding.bookingLBLDestination.text =
             "Flight to ${destination.city}"
 
@@ -74,7 +86,7 @@ class BookingFormFragment : Fragment() {
             "${destination.flightPrice}$"
     }
 
-    private fun setupSplashManager() {
+    private fun setupSplashManager() {  // Configures the loading animation and success action after booking
         splashManager = SplashScreenManager(
             overlayView = binding.bookingOVERLAYLoading,
             lottieView = binding.bookingLOTTIELoading,
@@ -89,7 +101,7 @@ class BookingFormFragment : Fragment() {
         )
     }
 
-    private fun setupAirlineDropdown() {
+    private fun setupAirlineDropdown() {// Creates and configures the airline selection dropdown list
 
         val airlines = listOf(
             "El Al",
@@ -113,7 +125,7 @@ class BookingFormFragment : Fragment() {
         }
     }
 
-    private fun setupDatePickers() {
+    private fun setupDatePickers() {    // Sets click listeners for the departure and return date fields
         binding.bookingEDTDepartureDate.setOnClickListener {
             showDatePicker(binding.bookingEDTDepartureDate)
         }
@@ -145,8 +157,7 @@ class BookingFormFragment : Fragment() {
 
 
 
-    private fun submitBooking() {
-
+    private fun submitBooking() {   // Starts the booking process after validating the form
         if (isBookingInProgress) return
         if (!isFormValid()) {
             SignalManager.getInstance().vibrate()
@@ -156,7 +167,7 @@ class BookingFormFragment : Fragment() {
         startBookingProcess()
     }
 
-    private fun isFormValid(): Boolean {
+    private fun isFormValid(): Boolean {    // Checks if all form fields contain valid input
 
         if (!ValidationUtils.isNameValid(binding.bookingEDTFirstName.text.toString())) {
             return showError("Invalid first name")
@@ -203,26 +214,74 @@ class BookingFormFragment : Fragment() {
         return true
     }
 
-    private fun showError(message: String): Boolean {
+    private fun showError(message: String): Boolean {   // Shows an error message and vibrates the device
         SignalManager.getInstance().vibrate()
         SignalManager.getInstance().toast(message)
         return false
     }
 
+    private fun saveBookingToFirebase(onSuccess: () -> Unit) {  // Saves the booking details to Firebase under the current user
 
-    private fun startBookingProcess() {
+        val uid = FirebaseAuth.getInstance().currentUser?.uid
+        if (uid == null) {
+            splashManager.stop()
+            return
+        }
 
+        val database = FirebaseDatabase.getInstance(
+            "https://etravelapp-fae5b-default-rtdb.europe-west1.firebasedatabase.app"
+        )
+
+        val bookingsRef = database
+            .getReference("users")
+            .child(uid)
+            .child("bookings")
+
+        val bookingNumber = "ORD-" + System.currentTimeMillis()
+
+        val booking = Booking(
+            bookingNumber = bookingNumber,
+            destinationId = destination.id,
+            city = destination.city,
+            country = destination.country,
+            departureDate = binding.bookingEDTDepartureDate.text.toString(),
+            returnDate = binding.bookingEDTReturnDate.text.toString(),
+            airline = binding.bookingEDTAirline.text.toString(),
+            firstName = binding.bookingEDTFirstName.text.toString(),
+            lastName = binding.bookingEDTLastName.text.toString(),
+            email = binding.bookingEDTEmail.text.toString(),
+            phone = binding.bookingEDTPhone.text.toString(),
+            price = destination.flightPrice
+        )
+
+        bookingsRef.child(bookingNumber).setValue(booking)
+            .addOnSuccessListener {
+                onSuccess()
+            }
+            .addOnFailureListener {
+                splashManager.stop()
+            }
+    }
+
+
+
+
+    private fun startBookingProcess() { // Starts the loading animation and saves the booking
         splashManager.start()
 
-        bookingJob = viewLifecycleOwner.lifecycleScope.launch {
+        saveBookingToFirebase {
 
-            delay(2000)
-
-            splashManager.stop()
+            viewLifecycleOwner.lifecycleScope.launch {
+                delay(1500)
+                splashManager.stop()
+            }
         }
     }
 
-    private fun navigateToSuccessScreen() {
+
+
+
+    private fun navigateToSuccessScreen() { // Navigates to the success screen after booking is completed
 
         val fragment = BookingSuccessFragment()
 

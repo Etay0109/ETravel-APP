@@ -13,17 +13,21 @@ object FirebaseDestinationManager {
     private fun ref(type: DestinationType) =
         database.getReference("destinations/${type.name.lowercase()}")
 
-    fun checkAndSeedDestinations(
+    fun checkAndSeedDestinations(   // Checks if destinations exist in Firebase, and if not, saves the initial list
         type: DestinationType,
         destinations: List<DestinationItem>,
         onComplete: () -> Unit
     ) {
         val ref = ref(type)
+
         ref.get().addOnSuccessListener { snapshot ->
             if (!snapshot.exists()) {
-                ref.setValue(destinations).addOnSuccessListener {
-                    onComplete()
+
+                for (destination in destinations) {
+                    ref.child(destination.id).setValue(destination)
                 }
+
+                onComplete()
             } else {
                 onComplete()
             }
@@ -31,20 +35,27 @@ object FirebaseDestinationManager {
     }
 
 
-    fun updateUserFavorite( //Saving the user's favorite destinations
+
+    fun updateUserFavorite(    // Updates a destination from the user's favorites
         uid: String,
         type: DestinationType,
         destinationId: String,
         isFavorite: Boolean
     ) {
-        database
+        val ref = database
             .getReference("users")
             .child(uid)
             .child("favorites")
             .child(type.name.lowercase())
             .child(destinationId)
-            .setValue(isFavorite)
+
+        if (isFavorite) {
+            ref.setValue(true)
+        } else {
+            ref.removeValue()
+        }
     }
+
 
 
     fun getUserFavorites(   //Getting the user's favorite destinations
@@ -76,7 +87,7 @@ object FirebaseDestinationManager {
     }
 
 
-    fun getDestinations(
+    fun getDestinations(    // Gets destinations from Firebase by type and returns them as a list through a callback
         type: DestinationType,
         onResult: (List<DestinationItem>) -> Unit
     ) {

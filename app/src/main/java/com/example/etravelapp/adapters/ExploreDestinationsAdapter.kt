@@ -70,13 +70,13 @@ class ExploreDestinationsAdapter(
 
     override fun getItemCount(): Int = destinations.size
 
-    fun updateData(newList: List<DestinationItem>) {
+    fun updateData(newList: List<DestinationItem>) {    // Updates the adapter data with a new list and refreshes the UI
         destinations.clear()
         destinations.addAll(newList)
         notifyDataSetChanged()
     }
 
-    fun removeItem(position: Int) {
+    fun removeItem(position: Int) { // Removes a specific item from the list and updates the RecyclerView
         if (position < 0 || position >= destinations.size) return
         destinations.removeAt(position)
         notifyItemRemoved(position)

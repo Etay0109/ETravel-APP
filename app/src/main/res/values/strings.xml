@@ -48,5 +48,19 @@
     <string name="expiry_date">Expiry</string>
     <string name="mm_yy">MM/YY</string>
     <string name="book_now">Book Now</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="don_t_have_an_account">Don’t have an account</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_your_username">Enter your username</string>
+    <string name="enter_your_email_address">Enter your email address</string>
+    <string name="_123">123</string>
+    <string name="v">✓</string>
+    <string name="booking_confirmed">Booking Confirmed!</string>
+    <string name="your_flight_has_been_successfully_booked">Your flight has been successfully booked</string>
+    <string name="destination">Destination</string>
+    <string name="departure">Departure</string>
+    <string name="total_price">Total Price</string>
+    <string name="passenger_information">Passenger Information</string>
+    <string name="back_to_home">Back to Home</string>
 
 </resources>

@@ -16,6 +16,8 @@ import com.example.etravelapp.utilities.SignalManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+import android.provider.OpenableColumns
+
 
 class ProfileFragment : Fragment() {
 
@@ -71,7 +73,7 @@ class ProfileFragment : Fragment() {
     }
 
 
-    private fun showUserInfo() {
+    private fun showUserInfo() {    // Displays the current user's name and email on the screen
         val user = auth.currentUser ?: return
         binding.profileLBLName.text = user.displayName ?: "User"
         binding.profileLBLEmail.text = user.email ?: ""
@@ -99,10 +101,33 @@ class ProfileFragment : Fragment() {
             }
     }
 
+    private fun getFileName(uri: Uri): String? {    // Get the file name from the phone
+        var fileName: String? = null
+
+        val cursor = requireContext().contentResolver.query(
+            uri,
+            null,
+            null,
+            null,
+            null
+        )
+
+        if (cursor != null) {
+            val nameIndex = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME)
+            if (cursor.moveToFirst() && nameIndex >= 0) {
+                fileName = cursor.getString(nameIndex)
+            }
+            cursor.close()
+        }
+
+        return fileName
+    }
+
+
 
     private fun uploadUserDocument(fileUri: Uri) {  // Uploads a document to Firebase Storage
         val uid = auth.currentUser?.uid ?: return
-        val fileName = fileUri.lastPathSegment ?: "document"
+        val fileName = getFileName(fileUri) ?: "document"
 
         val fileRef = storage.reference
             .child("user_documents/$uid/$fileName")
@@ -166,7 +191,7 @@ class ProfileFragment : Fragment() {
     }
 
 
-    private fun logout() {
+    private fun logout() {  // Signs out the user and returns to the login screen
         auth.signOut()
         val intent = Intent(requireContext(), LoginActivity::class.java)
         intent.flags =

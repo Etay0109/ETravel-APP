@@ -28,7 +28,7 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="✓"
+                android:text="@string/v"
                 android:textColor="@color/white"
                 android:textSize="64sp"
                 android:gravity="center"
@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Booking Confirmed!"
+            android:text="@string/booking_confirmed"
             android:textColor="#2C3E50"
             android:textSize="28sp"
             android:textStyle="bold"
@@ -52,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Your flight has been successfully booked"
+            android:text="@string/your_flight_has_been_successfully_booked"
             android:textColor="#7B8FA3"
             android:textSize="16sp"
             android:gravity="center"
@@ -129,7 +129,7 @@
                         <com.google.android.material.textview.MaterialTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Destination"
+                            android:text="@string/destination"
                             android:textColor="#B0BEC5"
                             android:textSize="12sp" />
 
@@ -180,7 +180,7 @@
                         <com.google.android.material.textview.MaterialTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Departure"
+                            android:text="@string/departure"
                             android:textColor="#B0BEC5"
                             android:textSize="12sp" />
 
@@ -340,7 +340,7 @@
                         <com.google.android.material.textview.MaterialTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Total Price"
+                            android:text="@string/total_price"
                             android:textColor="#B0BEC5"
                             android:textSize="12sp" />
 
@@ -380,7 +380,7 @@
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Passenger Information"
+                    android:text="@string/passenger_information"
                     android:textColor="#2C3E50"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -469,7 +469,7 @@
             android:id="@+id/confirmation_BTN_home"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Back to Home"
+            android:text="@string/back_to_home"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/white"

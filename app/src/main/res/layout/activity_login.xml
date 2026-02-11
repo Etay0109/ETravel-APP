@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background"
-        android:padding="32dp">
+        android:padding="@dimen/login_screen_padding">
 
     <!-- Welcome -->
     <com.google.android.material.textview.MaterialTextView
@@ -32,7 +32,7 @@
         android:id="@+id/login_LBL_appName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="@dimen/login_margin_xsmall"
         android:text="@string/app_name_display"
         android:textSize="@dimen/app_name_text_size"
         android:textStyle="bold"
@@ -47,7 +47,7 @@
         android:id="@+id/login_LBL_subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/login_margin_top"
         android:text="@string/login_subtitle"
         android:textSize="@dimen/subtitle_text_size"
         android:textColor="@color/white"
@@ -155,7 +155,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="@dimen/login_margin_input"
                 android:layoutDirection="ltr">
 
                 <EditText
@@ -209,13 +209,13 @@
         android:id="@+id/login_BTN_signInGoogle"
         android:layout_width="0dp"
         android:layout_height="56dp"
-        android:layout_marginTop="16dp"
-        android:text="Sign in with Google"
-        android:textSize="16sp"
+        android:layout_marginTop="@dimen/login_margin_sign_up"
+        android:text="@string/sign_in_with_google"
+        android:textSize="@dimen/login_sign_up_text_size"
         android:textStyle="bold"
         android:textColor="#2D5F8D"
         android:textDirection="ltr"
-        app:cornerRadius="28dp"
+        app:cornerRadius="@dimen/login_corner_radius"
         app:strokeColor="#2D5F8D"
         app:strokeWidth="2dp"
         app:backgroundTint="@android:color/white"
@@ -231,7 +231,7 @@
         android:id="@+id/login_LAYOUT_signUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/login_signup_margin_top"
         android:layoutDirection="ltr"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/login_BTN_signInGoogle"
@@ -241,8 +241,8 @@
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Don’t have an account "
-            android:textSize="14sp"
+            android:text="@string/don_t_have_an_account"
+            android:textSize="@dimen/login_dont_have_account_text_size"
             android:textColor="#5A7A99"
             android:fontFamily="sans-serif" />
 
@@ -250,7 +250,7 @@
             android:id="@+id/login_LBL_signUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign Up"
+            android:text="@string/sign_up"
             android:textSize="14sp"
             android:textColor="#2D5F8D"
             android:textStyle="bold"

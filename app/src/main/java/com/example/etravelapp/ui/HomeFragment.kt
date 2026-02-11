@@ -53,7 +53,7 @@ class HomeFragment : Fragment() {
 
     }
 
-    override fun onResume() {
+    override fun onResume() {   // Reloads the popular and explore lists when the fragment becomes visible
         super.onResume()
 
         val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return
@@ -63,7 +63,7 @@ class HomeFragment : Fragment() {
 
 
 
-    private fun setupPopularRecycler(uid: String) {
+    private fun setupPopularRecycler(uid: String) {    // Sets up the horizontal popular destinations RecyclerView and handles clicks
         binding.homeRVPopular.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
@@ -100,7 +100,7 @@ class HomeFragment : Fragment() {
     }
 
 
-    private fun setupExploreRecycler(uid: String) {
+    private fun setupExploreRecycler(uid: String) { // Sets up the vertical explore destinations RecyclerView and handles clicks
         binding.homeRVExplore.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
@@ -140,7 +140,7 @@ class HomeFragment : Fragment() {
 
     }
 
-    private fun openDestinationDetails(destination: DestinationItem) {
+    private fun openDestinationDetails(destination: DestinationItem) {  // Opens the destination details screen and passes the selected destination
         val fragment = DestinationDetailsFragment()
 
         val bundle = Bundle()
@@ -153,7 +153,7 @@ class HomeFragment : Fragment() {
             .commit()
     }
 
-    private fun seedIfNeeded(uid: String) {
+    private fun seedIfNeeded(uid: String) { // Seeds initial destinations to Firebase if they do not already exist
         FirebaseDestinationManager.checkAndSeedDestinations(
             DestinationType.POPULAR,
             DestinationDataManager.getPopularDestinations()

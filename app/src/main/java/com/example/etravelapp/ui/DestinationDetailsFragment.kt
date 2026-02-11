@@ -62,7 +62,7 @@ class DestinationDetailsFragment : Fragment() {
         }
     }
 
-    private fun bindDestinationData() {
+    private fun bindDestinationData() { // Binds destination details and attractions data to the UI
 
         // Header image
         ImageLoader.getInstance().loadImage(
@@ -85,7 +85,7 @@ class DestinationDetailsFragment : Fragment() {
         attractionsAdapter.updateData(destination.attractions)
     }
 
-    private fun navigateToBookingForm() {
+    private fun navigateToBookingForm() {   // Navigates to the booking form screen with the selected destination
         val bookingFragment = BookingFormFragment()
 
         bookingFragment.arguments = Bundle().apply {

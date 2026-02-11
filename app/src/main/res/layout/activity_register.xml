@@ -117,7 +117,7 @@
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="6dp"
+                                android:layout_marginTop="@dimen/register_field_inner_margin_top"
                                 android:layoutDirection="ltr">
 
                                 <EditText
@@ -128,7 +128,7 @@
                                     android:layout_toStartOf="@id/register_IMG_usernameIcon"
                                     android:background="@null"
                                     android:gravity="start"
-                                    android:hint="Enter your username"
+                                    android:hint="@string/enter_your_username"
                                     android:inputType="text"
                                     android:textColor="#1E3A5F"
                                     android:textColorHint="#B0BEC5"
@@ -194,12 +194,12 @@
                                     android:layout_toStartOf="@id/register_IMG_emailIcon"
                                     android:background="@null"
                                     android:gravity="start"
-                                    android:hint="Enter your email address"
+                                    android:hint="@string/enter_your_email_address"
                                     android:inputType="textEmailAddress"
                                     android:textColor="#1E3A5F"
                                     android:textColorHint="#B0BEC5"
                                     android:textDirection="ltr"
-                                    android:textSize="15sp" />
+                                    android:textSize="@dimen/register_email_text_size" />
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/register_IMG_emailIcon"
@@ -381,8 +381,8 @@
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/register_LOTTIE_loading"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
+            android:layout_width="@dimen/register_load_animation_size"
+            android:layout_height="@dimen/register_load_animation_size"
             android:layout_gravity="center"
             app:lottie_rawRes="@raw/loading_text"
             app:lottie_loop="true"/>

@@ -49,4 +49,20 @@
     <dimen name="register_btn_size">56dp</dimen>
     <dimen name="register_btn_marginTop">32dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="login_screen_padding">32dp</dimen>
+    <dimen name="login_margin_xsmall">4dp</dimen>
+    <dimen name="login_margin_top">8dp</dimen>
+    <dimen name="login_margin_input">6dp</dimen>
+    <dimen name="login_margin_sign_up">16dp</dimen>
+    <dimen name="login_sign_up_text_size">16sp</dimen>
+    <dimen name="login_corner_radius">28dp</dimen>
+    <dimen name="login_signup_margin_top">16dp</dimen>
+    <dimen name="login_dont_have_account_text_size">14sp</dimen>
+    <dimen name="register_email_text_size">15sp</dimen>
+    <dimen name="register_field_inner_margin_top">6dp</dimen>
+    <dimen name="register_load_animation_size">180dp</dimen>
+    <dimen name="booking_form_screen_padding">20dp</dimen>
+    <dimen name="booking_form_card_corner_radius">20dp</dimen>
+    <dimen name="booking_form_card_margin_vertical">20dp</dimen>
+    <dimen name="booking_form_card_elevation">8dp</dimen>
 </resources>

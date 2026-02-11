@@ -32,7 +32,7 @@ class FavoritesFragment : Fragment() {
         return binding.root
     }
 
-    private fun setupRecyclerView() {
+    private fun setupRecyclerView() {   // Sets up the favorites RecyclerView and handles favorite item clicks
         favoritesAdapter = ExploreDestinationsAdapter(mutableListOf())
 
         binding.favoritesRVList.layoutManager =
@@ -75,12 +75,12 @@ class FavoritesFragment : Fragment() {
             }
     }
 
-    override fun onResume() {
+    override fun onResume() {   // Reloads the favorites list when the fragment becomes visible
         super.onResume()
         loadFavorites()
     }
 
-    private fun loadFavorites() {
+    private fun loadFavorites() {   // Loads the user's favorite destinations from Firebase (Explore and Popular)
         val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return
 
         val allFavorites = mutableListOf<DestinationItem>()
