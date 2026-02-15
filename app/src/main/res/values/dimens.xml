@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- activity_login -->
     <dimen name="welcome_margin_top">20dp</dimen>
     <dimen name="welcome_text_size">24sp</dimen>
     <dimen name="app_name_text_size">36sp</dimen>
@@ -22,7 +23,24 @@
     <dimen name="corner_radius_sign_in">28dp</dimen>
     <dimen name="sign_up_marginTop">20dp</dimen>
     <dimen name="sign_up_text_size">14sp</dimen>
+    <dimen name="login_screen_padding">32dp</dimen>
+    <dimen name="login_margin_xsmall">4dp</dimen>
+    <dimen name="login_margin_top">8dp</dimen>
+    <dimen name="login_margin_input">6dp</dimen>
+    <dimen name="login_card_elevation">2dp</dimen>
+    <dimen name="login_margin_sign_up">16dp</dimen>
+    <dimen name="login_sign_up_text_size">16sp</dimen>
+    <dimen name="login_corner_radius">28dp</dimen>
+    <dimen name="login_sign_in_elevation">4dp</dimen>
+    <dimen name="login_google_btn_height">56dp</dimen>
+    <dimen name="login_google_stroke_width">2dp</dimen>
+    <dimen name="login_google_elevation">2dp</dimen>
+    <dimen name="login_signup_margin_top">16dp</dimen>
+    <dimen name="login_dont_have_account_text_size">14sp</dimen>
+    <dimen name="login_sign_up_link_text_size">14sp</dimen>
+    <dimen name="login_loading_animation_size">180dp</dimen>
 
+    <!-- activity_register -->
     <dimen name="register_container_padding">16dp</dimen>
     <dimen name="register_card_margin">16dp</dimen>
     <dimen name="register_card_corner_radius">24dp</dimen>
@@ -49,20 +67,262 @@
     <dimen name="register_btn_size">56dp</dimen>
     <dimen name="register_btn_marginTop">32dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
-    <dimen name="login_screen_padding">32dp</dimen>
-    <dimen name="login_margin_xsmall">4dp</dimen>
-    <dimen name="login_margin_top">8dp</dimen>
-    <dimen name="login_margin_input">6dp</dimen>
-    <dimen name="login_margin_sign_up">16dp</dimen>
-    <dimen name="login_sign_up_text_size">16sp</dimen>
-    <dimen name="login_corner_radius">28dp</dimen>
-    <dimen name="login_signup_margin_top">16dp</dimen>
-    <dimen name="login_dont_have_account_text_size">14sp</dimen>
     <dimen name="register_email_text_size">15sp</dimen>
     <dimen name="register_field_inner_margin_top">6dp</dimen>
     <dimen name="register_load_animation_size">180dp</dimen>
+
+    <!-- fragment_favorites -->
+    <dimen name="favorites_header_elevation">6dp</dimen>
+    <dimen name="favorites_header_padding_horizontal">20dp</dimen>
+    <dimen name="favorites_header_padding_vertical">24dp</dimen>
+    <dimen name="favorites_header_text_size">22sp</dimen>
+    <dimen name="favorites_empty_padding">32dp</dimen>
+    <dimen name="favorites_empty_icon_size">120dp</dimen>
+    <dimen name="favorites_empty_icon_margin_bottom">24dp</dimen>
+    <dimen name="favorites_empty_icon_corner_radius">60dp</dimen>
+    <dimen name="favorites_empty_icon_elevation">6dp</dimen>
+    <dimen name="favorites_empty_emoji_text_size">56sp</dimen>
+    <dimen name="favorites_empty_title_margin_bottom">12dp</dimen>
+    <dimen name="favorites_empty_title_text_size">24sp</dimen>
+    <dimen name="favorites_empty_subtitle_width">260dp</dimen>
+    <dimen name="favorites_empty_subtitle_line_spacing">4dp</dimen>
+    <dimen name="favorites_empty_subtitle_text_size">16sp</dimen>
+    <dimen name="favorites_list_padding_horizontal">16dp</dimen>
+    <dimen name="favorites_list_padding_top">20dp</dimen>
+    <dimen name="favorites_list_padding_bottom">88dp</dimen>
+
+    <!-- fragment_home -->
+    <dimen name="home_header_height">120dp</dimen>
+    <dimen name="home_header_padding">24dp</dimen>
+    <dimen name="home_welcome_text_size">16sp</dimen>
+    <dimen name="home_username_text_size">28sp</dimen>
+    <dimen name="home_profile_card_size">50dp</dimen>
+    <dimen name="home_profile_card_corner_radius">25dp</dimen>
+    <dimen name="home_profile_card_elevation">4dp</dimen>
+    <dimen name="home_profile_icon_padding">12dp</dimen>
+    <dimen name="home_content_padding_bottom">16dp</dimen>
+    <dimen name="home_section_title_text_size">20sp</dimen>
+    <dimen name="home_section_title_margin_start">20dp</dimen>
+    <dimen name="home_popular_title_margin_top">20dp</dimen>
+    <dimen name="home_explore_title_margin_top">24dp</dimen>
+    <dimen name="home_explore_list_margin_top">16dp</dimen>
+
+    <!-- fragment_profile -->
+    <dimen name="profile_header_elevation">6dp</dimen>
+    <dimen name="profile_header_padding_horizontal">20dp</dimen>
+    <dimen name="profile_header_padding_vertical">24dp</dimen>
+    <dimen name="profile_header_text_size">22sp</dimen>
+    <dimen name="profile_content_padding">24dp</dimen>
+    <dimen name="profile_card_corner_radius">24dp</dimen>
+    <dimen name="profile_card_elevation">8dp</dimen>
+    <dimen name="profile_card_inner_padding">24dp</dimen>
+    <dimen name="profile_avatar_size">96dp</dimen>
+    <dimen name="profile_name_margin_top">16dp</dimen>
+    <dimen name="profile_name_text_size">20sp</dimen>
+    <dimen name="profile_email_margin_top">4dp</dimen>
+    <dimen name="profile_email_text_size">14sp</dimen>
+    <dimen name="profile_section_title_margin_top">32dp</dimen>
+    <dimen name="profile_section_title_margin_bottom">12dp</dimen>
+    <dimen name="profile_section_title_text_size">16sp</dimen>
+    <dimen name="profile_upload_card_corner_radius">20dp</dimen>
+    <dimen name="profile_upload_stroke_width">1dp</dimen>
+    <dimen name="profile_upload_inner_padding">20dp</dimen>
+    <dimen name="profile_upload_icon_size">48dp</dimen>
+    <dimen name="profile_upload_icon_padding">12dp</dimen>
+    <dimen name="profile_upload_text_margin_start">16dp</dimen>
+    <dimen name="profile_upload_title_text_size">16sp</dimen>
+    <dimen name="profile_upload_subtitle_margin_top">2dp</dimen>
+    <dimen name="profile_upload_subtitle_text_size">13sp</dimen>
+    <dimen name="profile_logout_height">56dp</dimen>
+    <dimen name="profile_logout_margin_top">32dp</dimen>
+    <dimen name="profile_logout_text_size">16sp</dimen>
+    <dimen name="profile_logout_corner_radius">28dp</dimen>
+    <dimen name="profile_logout_stroke_width">2dp</dimen>
+
+    <!-- fragment_destination_details -->
+    <dimen name="details_content_padding_bottom">24dp</dimen>
+    <dimen name="details_header_height">380dp</dimen>
+    <dimen name="details_gradient_height">160dp</dimen>
+    <dimen name="details_back_btn_size">40dp</dimen>
+    <dimen name="details_back_btn_margin_start">24dp</dimen>
+    <dimen name="details_back_btn_margin_top">48dp</dimen>
+    <dimen name="details_back_btn_elevation">6dp</dimen>
+    <dimen name="details_back_btn_padding">8dp</dimen>
+    <dimen name="details_header_content_padding">18dp</dimen>
+    <dimen name="details_city_text_size">40sp</dimen>
+    <dimen name="details_location_icon_size">16dp</dimen>
+    <dimen name="details_country_margin_start">4dp</dimen>
+    <dimen name="details_country_text_size">18sp</dimen>
+    <dimen name="details_section_padding">24dp</dimen>
+    <dimen name="details_section_title_text_size">20sp</dimen>
+    <dimen name="details_description_margin_top">8dp</dimen>
+    <dimen name="details_description_line_spacing">6dp</dimen>
+    <dimen name="details_description_text_size">15sp</dimen>
+    <dimen name="details_places_margin_top">24dp</dimen>
+    <dimen name="details_places_margin_bottom">12dp</dimen>
+    <dimen name="details_travel_info_margin_top">24dp</dimen>
+    <dimen name="details_travel_info_margin_bottom">16dp</dimen>
+    <dimen name="details_info_card_margin_horizontal">8dp</dimen>
+    <dimen name="details_info_card_margin_bottom">12dp</dimen>
+    <dimen name="details_info_card_corner_radius">16dp</dimen>
+    <dimen name="details_info_card_padding">20dp</dimen>
+    <dimen name="details_info_icon_size">32dp</dimen>
+    <dimen name="details_info_label_margin_top">8dp</dimen>
+    <dimen name="details_info_label_text_size">12sp</dimen>
+    <dimen name="details_info_value_margin_top">4dp</dimen>
+    <dimen name="details_info_value_text_size">16sp</dimen>
+    <dimen name="details_info_card_margin_top">4dp</dimen>
+    <dimen name="details_book_btn_height">60dp</dimen>
+    <dimen name="details_book_btn_margin_vertical">32dp</dimen>
+    <dimen name="details_book_btn_text_size">18sp</dimen>
+    <dimen name="details_book_btn_corner_radius">30dp</dimen>
+
+    <!-- fragment_booking_success -->
+    <dimen name="success_content_padding">24dp</dimen>
+    <dimen name="success_icon_size">120dp</dimen>
+    <dimen name="success_icon_margin_top">32dp</dimen>
+    <dimen name="success_icon_margin_bottom">24dp</dimen>
+    <dimen name="success_icon_corner_radius">60dp</dimen>
+    <dimen name="success_icon_elevation">8dp</dimen>
+    <dimen name="success_icon_text_size">64sp</dimen>
+    <dimen name="success_title_text_size">28sp</dimen>
+    <dimen name="success_title_margin_bottom">8dp</dimen>
+    <dimen name="success_subtitle_text_size">16sp</dimen>
+    <dimen name="success_subtitle_margin_bottom">8dp</dimen>
+    <dimen name="success_reference_text_size">15sp</dimen>
+    <dimen name="success_reference_margin_bottom">32dp</dimen>
+    <dimen name="success_card_margin_bottom">24dp</dimen>
+    <dimen name="success_card_corner_radius">16dp</dimen>
+    <dimen name="success_card_elevation">3dp</dimen>
+    <dimen name="success_card_inner_padding">20dp</dimen>
+    <dimen name="success_section_title_text_size">18sp</dimen>
+    <dimen name="success_section_title_margin_bottom">16dp</dimen>
+    <dimen name="success_row_margin_bottom">16dp</dimen>
+    <dimen name="success_row_icon_bg_size">40dp</dimen>
+    <dimen name="success_row_icon_bg_corner_radius">20dp</dimen>
+    <dimen name="success_row_icon_size">24dp</dimen>
+    <dimen name="success_row_content_margin_start">12dp</dimen>
+    <dimen name="success_row_label_text_size">12sp</dimen>
+    <dimen name="success_row_value_text_size">16sp</dimen>
+    <dimen name="success_divider_height">1dp</dimen>
+    <dimen name="success_divider_margin_vertical">8dp</dimen>
+    <dimen name="success_price_margin_top">8dp</dimen>
+    <dimen name="success_price_text_size">24sp</dimen>
+    <dimen name="success_passenger_card_margin_bottom">32dp</dimen>
+    <dimen name="success_passenger_icon_size">20dp</dimen>
+    <dimen name="success_passenger_icon_margin_end">12dp</dimen>
+    <dimen name="success_passenger_row_margin_bottom">12dp</dimen>
+    <dimen name="success_passenger_text_size">16sp</dimen>
+    <dimen name="success_home_btn_height">60dp</dimen>
+    <dimen name="success_home_btn_text_size">18sp</dimen>
+    <dimen name="success_home_btn_corner_radius">30dp</dimen>
+    <dimen name="success_home_btn_elevation">4dp</dimen>
+    <dimen name="success_home_btn_margin_bottom">40dp</dimen>
+
+    <!-- fragment_booking_form -->
     <dimen name="booking_form_screen_padding">20dp</dimen>
     <dimen name="booking_form_card_corner_radius">20dp</dimen>
     <dimen name="booking_form_card_margin_vertical">20dp</dimen>
     <dimen name="booking_form_card_elevation">8dp</dimen>
+    <dimen name="booking_form_inner_padding">24dp</dimen>
+    <dimen name="booking_form_title_margin_bottom">24dp</dimen>
+    <dimen name="booking_form_title_text_size">28sp</dimen>
+    <dimen name="booking_form_summary_margin_bottom">24dp</dimen>
+    <dimen name="booking_form_summary_corner_radius">12dp</dimen>
+    <dimen name="booking_form_summary_padding">16dp</dimen>
+    <dimen name="booking_form_price_text_size">24sp</dimen>
+    <dimen name="booking_form_destination_text_size">16sp</dimen>
+    <dimen name="booking_form_price_label_margin_top">4dp</dimen>
+    <dimen name="booking_form_price_label_text_size">12sp</dimen>
+    <dimen name="booking_form_section_title_margin_bottom">12dp</dimen>
+    <dimen name="booking_form_section_title_text_size">18sp</dimen>
+    <dimen name="booking_form_field_margin_bottom">16dp</dimen>
+    <dimen name="booking_form_field_corner_radius">12dp</dimen>
+    <dimen name="booking_form_field_elevation">4dp</dimen>
+    <dimen name="booking_form_field_padding">12dp</dimen>
+    <dimen name="booking_form_field_inner_margin_top">4dp</dimen>
+    <dimen name="booking_form_field_icon_size">24dp</dimen>
+    <dimen name="booking_form_email_margin_bottom">24dp</dimen>
+    <dimen name="booking_form_payment_section_margin_top">12dp</dimen>
+    <dimen name="booking_form_card_half_margin">8dp</dimen>
+    <dimen name="booking_form_submit_height">60dp</dimen>
+    <dimen name="booking_form_submit_margin_bottom">20dp</dimen>
+    <dimen name="booking_form_submit_text_size">18sp</dimen>
+    <dimen name="booking_form_submit_corner_radius">30dp</dimen>
+    <dimen name="booking_form_submit_elevation">4dp</dimen>
+    <dimen name="booking_form_loading_size">180dp</dimen>
+
+    <!-- activity_register (remaining hardcoded) -->
+    <dimen name="register_field_card_elevation">2dp</dimen>
+    <dimen name="register_btn_elevation">4dp</dimen>
+
+    <!-- item_popular_destination -->
+    <dimen name="popular_card_width">180dp</dimen>
+    <dimen name="popular_card_height">240dp</dimen>
+    <dimen name="popular_card_margin">8dp</dimen>
+    <dimen name="popular_card_corner_radius">16dp</dimen>
+    <dimen name="popular_card_elevation">4dp</dimen>
+    <dimen name="popular_gradient_height">60dp</dimen>
+    <dimen name="popular_favorite_size">36dp</dimen>
+    <dimen name="popular_favorite_margin">16dp</dimen>
+    <dimen name="popular_favorite_corner_radius">18dp</dimen>
+    <dimen name="popular_favorite_elevation">2dp</dimen>
+    <dimen name="popular_favorite_icon_size">20dp</dimen>
+    <dimen name="popular_city_text_size">22sp</dimen>
+    <dimen name="popular_city_margin_start">16dp</dimen>
+    <dimen name="popular_city_margin_bottom">4dp</dimen>
+    <dimen name="popular_location_icon_size">14dp</dimen>
+    <dimen name="popular_location_margin_start">16dp</dimen>
+    <dimen name="popular_country_margin_start">4dp</dimen>
+    <dimen name="popular_country_margin_bottom">16dp</dimen>
+    <dimen name="popular_country_text_size">14sp</dimen>
+
+    <!-- item_explore_destination -->
+    <dimen name="explore_card_margin_bottom">16dp</dimen>
+    <dimen name="explore_card_corner_radius">16dp</dimen>
+    <dimen name="explore_card_elevation">4dp</dimen>
+    <dimen name="explore_card_padding">12dp</dimen>
+    <dimen name="explore_image_size">100dp</dimen>
+    <dimen name="explore_image_corner_radius">12dp</dimen>
+    <dimen name="explore_info_margin_start">16dp</dimen>
+    <dimen name="explore_city_text_size">20sp</dimen>
+    <dimen name="explore_country_icon_size">16dp</dimen>
+    <dimen name="explore_country_margin_top">6dp</dimen>
+    <dimen name="explore_country_margin_start">4dp</dimen>
+    <dimen name="explore_country_text_size">14sp</dimen>
+    <dimen name="explore_flight_icon_size">16dp</dimen>
+    <dimen name="explore_flight_margin_top">8dp</dimen>
+    <dimen name="explore_flight_margin_start">4dp</dimen>
+    <dimen name="explore_flight_text_size">13sp</dimen>
+    <dimen name="explore_favorite_size">44dp</dimen>
+    <dimen name="explore_favorite_corner_radius">22dp</dimen>
+    <dimen name="explore_favorite_elevation">2dp</dimen>
+    <dimen name="explore_favorite_icon_padding">12dp</dimen>
+
+    <!-- item_document_card -->
+    <dimen name="doc_card_margin_bottom">12dp</dimen>
+    <dimen name="doc_card_corner_radius">12dp</dimen>
+    <dimen name="doc_card_elevation">2dp</dimen>
+    <dimen name="doc_card_stroke_width">1dp</dimen>
+    <dimen name="doc_card_padding">12dp</dimen>
+    <dimen name="doc_icon_bg_size">40dp</dimen>
+    <dimen name="doc_icon_bg_corner_radius">20dp</dimen>
+    <dimen name="doc_icon_padding">10dp</dimen>
+    <dimen name="doc_name_margin_start">16dp</dimen>
+    <dimen name="doc_name_text_size">14sp</dimen>
+    <dimen name="doc_delete_btn_size">40dp</dimen>
+    <dimen name="doc_delete_icon_size">24dp</dimen>
+
+    <!-- item_attraction_card_placeholder -->
+    <dimen name="attraction_card_width">160dp</dimen>
+    <dimen name="attraction_card_height">160dp</dimen>
+    <dimen name="attraction_card_margin_end">16dp</dimen>
+    <dimen name="attraction_card_margin_bottom">8dp</dimen>
+    <dimen name="attraction_card_margin_top">4dp</dimen>
+    <dimen name="attraction_card_corner_radius">16dp</dimen>
+    <dimen name="attraction_card_elevation">4dp</dimen>
+    <dimen name="attraction_gradient_height">60dp</dimen>
+    <dimen name="attraction_name_padding_horizontal">12dp</dimen>
+    <dimen name="attraction_name_padding_bottom">12dp</dimen>
+    <dimen name="attraction_name_text_size">15sp</dimen>
 </resources>

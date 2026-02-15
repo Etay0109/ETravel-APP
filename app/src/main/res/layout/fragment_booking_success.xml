@@ -12,17 +12,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="@dimen/success_content_padding">
 
         <!-- Success Icon -->
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="@dimen/success_icon_size"
+            android:layout_height="@dimen/success_icon_size"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="24dp"
-            app:cardCornerRadius="60dp"
-            app:cardElevation="8dp"
+            android:layout_marginTop="@dimen/success_icon_margin_top"
+            android:layout_marginBottom="@dimen/success_icon_margin_bottom"
+            app:cardCornerRadius="@dimen/success_icon_corner_radius"
+            app:cardElevation="@dimen/success_icon_elevation"
             app:cardBackgroundColor="#4CAF50">
 
             <com.google.android.material.textview.MaterialTextView
@@ -30,7 +30,7 @@
                 android:layout_height="match_parent"
                 android:text="@string/v"
                 android:textColor="@color/white"
-                android:textSize="64sp"
+                android:textSize="@dimen/success_icon_text_size"
                 android:gravity="center"
                 android:textStyle="bold" />
 
@@ -43,9 +43,9 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/booking_confirmed"
             android:textColor="#2C3E50"
-            android:textSize="28sp"
+            android:textSize="@dimen/success_title_text_size"
             android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="@dimen/success_title_margin_bottom" />
 
         <!-- Subtitle -->
         <com.google.android.material.textview.MaterialTextView
@@ -54,9 +54,9 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/your_flight_has_been_successfully_booked"
             android:textColor="#7B8FA3"
-            android:textSize="16sp"
+            android:textSize="@dimen/success_subtitle_text_size"
             android:gravity="center"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="@dimen/success_subtitle_margin_bottom" />
 
         <!-- Booking Reference -->
         <com.google.android.material.textview.MaterialTextView
@@ -66,24 +66,24 @@
             android:layout_gravity="center_horizontal"
             tools:text="Booking #AB123456"
             android:textColor="#4A6EC8"
-            android:textSize="15sp"
+            android:textSize="@dimen/success_reference_text_size"
             android:textStyle="bold"
-            android:layout_marginBottom="32dp" />
+            android:layout_marginBottom="@dimen/success_reference_margin_bottom" />
 
         <!-- Booking Details Card -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="3dp"
+            android:layout_marginBottom="@dimen/success_card_margin_bottom"
+            app:cardCornerRadius="@dimen/success_card_corner_radius"
+            app:cardElevation="@dimen/success_card_elevation"
             app:cardBackgroundColor="@color/white">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="@dimen/success_card_inner_padding">
 
                 <!-- Section Title -->
                 <com.google.android.material.textview.MaterialTextView
@@ -91,9 +91,9 @@
                     android:layout_height="wrap_content"
                     android:text="Flight Details"
                     android:textColor="#2C3E50"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/success_section_title_text_size"
                     android:textStyle="bold"
-                    android:layout_marginBottom="16dp" />
+                    android:layout_marginBottom="@dimen/success_section_title_margin_bottom" />
 
                 <!-- Destination -->
                 <androidx.appcompat.widget.LinearLayoutCompat
@@ -101,18 +101,18 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
-                    android:layout_marginBottom="16dp">
+                    android:layout_marginBottom="@dimen/success_row_margin_bottom">
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        app:cardCornerRadius="20dp"
+                        android:layout_width="@dimen/success_row_icon_bg_size"
+                        android:layout_height="@dimen/success_row_icon_bg_size"
+                        app:cardCornerRadius="@dimen/success_row_icon_bg_corner_radius"
                         app:cardElevation="0dp"
                         app:cardBackgroundColor="#E3F2FD">
 
                         <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
+                            android:layout_width="@dimen/success_row_icon_size"
+                            android:layout_height="@dimen/success_row_icon_size"
                             android:layout_gravity="center"
                             app:srcCompat="@drawable/ic_location_pin"
                             app:tint="#c82309" />
@@ -124,14 +124,14 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:layout_marginStart="12dp">
+                        android:layout_marginStart="@dimen/success_row_content_margin_start">
 
                         <com.google.android.material.textview.MaterialTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/destination"
                             android:textColor="#B0BEC5"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/success_row_label_text_size" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/confirmation_LBL_destination"
@@ -139,7 +139,7 @@
                             android:layout_height="wrap_content"
                             tools:text="Paris, France"
                             android:textColor="#2C3E50"
-                            android:textSize="16sp"
+                            android:textSize="@dimen/success_row_value_text_size"
                             android:textStyle="bold" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -152,18 +152,18 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
-                    android:layout_marginBottom="16dp">
+                    android:layout_marginBottom="@dimen/success_row_margin_bottom">
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        app:cardCornerRadius="20dp"
+                        android:layout_width="@dimen/success_row_icon_bg_size"
+                        android:layout_height="@dimen/success_row_icon_bg_size"
+                        app:cardCornerRadius="@dimen/success_row_icon_bg_corner_radius"
                         app:cardElevation="0dp"
                         app:cardBackgroundColor="#FFEBEE">
 
                         <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
+                            android:layout_width="@dimen/success_row_icon_size"
+                            android:layout_height="@dimen/success_row_icon_size"
                             android:layout_gravity="center"
                             app:srcCompat="@drawable/ic_calender"
                             app:tint="#E57373" />
@@ -175,14 +175,14 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:layout_marginStart="12dp">
+                        android:layout_marginStart="@dimen/success_row_content_margin_start">
 
                         <com.google.android.material.textview.MaterialTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/departure"
                             android:textColor="#B0BEC5"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/success_row_label_text_size" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/confirmation_LBL_departure"
@@ -190,7 +190,7 @@
                             android:layout_height="wrap_content"
                             tools:text="January 15, 2026"
                             android:textColor="#2C3E50"
-                            android:textSize="16sp"
+                            android:textSize="@dimen/success_row_value_text_size"
                             android:textStyle="bold" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -203,18 +203,18 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
-                    android:layout_marginBottom="16dp">
+                    android:layout_marginBottom="@dimen/success_row_margin_bottom">
 
                     <com.google.android.material.card.MaterialCardView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        app:cardCornerRadius="20dp"
+                        android:layout_width="@dimen/success_row_icon_bg_size"
+                        android:layout_height="@dimen/success_row_icon_bg_size"
+                        app:cardCornerRadius="@dimen/success_row_icon_bg_corner_radius"
                         app:cardElevation="0dp"
                         app:cardBackgroundColor="#FFEBEE">
 
                         <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
+                            android:layout_width="@dimen/success_row_icon_size"
+                            android:layout_height="@dimen/success_row_icon_size"
                             android:layout_gravity="center"
                             app:srcCompat="@drawable/ic_calender"
                             app:tint="#E57373" />
@@ -226,14 +226,14 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:layout_marginStart="12dp">
+                        android:layout_marginStart="@dimen/success_row_content_margin_start">
 
                         <com.google.android.material.textview.MaterialTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Return"
                             android:textColor="#B0BEC5"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/success_row_label_text_size" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/confirmation_LBL_return"
@@ -241,7 +241,7 @@
                             android:layout_height="wrap_content"
                             tools:text="January 22, 2026"
                             android:textColor="#2C3E50"
-                            android:textSize="16sp"
+                            android:textSize="@dimen/success_row_value_text_size"
                             android:textStyle="bold" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -254,18 +254,18 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
-                    android:layout_marginBottom="16dp">
+                    android:layout_marginBottom="@dimen/success_row_margin_bottom">
 
                     <com.google.android.material.card.MaterialCardView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        app:cardCornerRadius="20dp"
+                        android:layout_width="@dimen/success_row_icon_bg_size"
+                        android:layout_height="@dimen/success_row_icon_bg_size"
+                        app:cardCornerRadius="@dimen/success_row_icon_bg_corner_radius"
                         app:cardElevation="0dp"
                         app:cardBackgroundColor="#E8F5E9">
 
                         <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
+                            android:layout_width="@dimen/success_row_icon_size"
+                            android:layout_height="@dimen/success_row_icon_size"
                             android:layout_gravity="center"
                             app:srcCompat="@drawable/ic_flight"
                             app:tint="#66BB6A" />
@@ -277,14 +277,14 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:layout_marginStart="12dp">
+                        android:layout_marginStart="@dimen/success_row_content_margin_start">
 
                         <com.google.android.material.textview.MaterialTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Airline"
                             android:textColor="#B0BEC5"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/success_row_label_text_size" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/confirmation_LBL_airline"
@@ -292,7 +292,7 @@
                             android:layout_height="wrap_content"
                             tools:text="El Al"
                             android:textColor="#2C3E50"
-                            android:textSize="16sp"
+                            android:textSize="@dimen/success_row_value_text_size"
                             android:textStyle="bold" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -302,9 +302,9 @@
                 <!-- Divider -->
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
+                    android:layout_height="@dimen/success_divider_height"
                     android:background="#E0E7EF"
-                    android:layout_marginVertical="8dp" />
+                    android:layout_marginVertical="@dimen/success_divider_margin_vertical" />
 
                 <!-- Total Price -->
                 <androidx.appcompat.widget.LinearLayoutCompat
@@ -312,18 +312,18 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
-                    android:layout_marginTop="8dp">
+                    android:layout_marginTop="@dimen/success_price_margin_top">
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        app:cardCornerRadius="20dp"
+                        android:layout_width="@dimen/success_row_icon_bg_size"
+                        android:layout_height="@dimen/success_row_icon_bg_size"
+                        app:cardCornerRadius="@dimen/success_row_icon_bg_corner_radius"
                         app:cardElevation="0dp"
                         app:cardBackgroundColor="#FFF3E0">
 
                         <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
+                            android:layout_width="@dimen/success_row_icon_size"
+                            android:layout_height="@dimen/success_row_icon_size"
                             android:layout_gravity="center"
                             app:srcCompat="@drawable/ic_money_bag"
                             app:tint="#FFB74D" />
@@ -335,14 +335,14 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:layout_marginStart="12dp">
+                        android:layout_marginStart="@dimen/success_row_content_margin_start">
 
                         <com.google.android.material.textview.MaterialTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/total_price"
                             android:textColor="#B0BEC5"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/success_row_label_text_size" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/confirmation_LBL_price"
@@ -350,7 +350,7 @@
                             android:layout_height="wrap_content"
                             tools:text="599$"
                             android:textColor="#4A6EC8"
-                            android:textSize="24sp"
+                            android:textSize="@dimen/success_price_text_size"
                             android:textStyle="bold" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -365,16 +365,16 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="3dp"
+            android:layout_marginBottom="@dimen/success_passenger_card_margin_bottom"
+            app:cardCornerRadius="@dimen/success_card_corner_radius"
+            app:cardElevation="@dimen/success_card_elevation"
             app:cardBackgroundColor="@color/white">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="@dimen/success_card_inner_padding">
 
                 <!-- Section Title -->
                 <com.google.android.material.textview.MaterialTextView
@@ -382,9 +382,9 @@
                     android:layout_height="wrap_content"
                     android:text="@string/passenger_information"
                     android:textColor="#2C3E50"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/success_section_title_text_size"
                     android:textStyle="bold"
-                    android:layout_marginBottom="16dp" />
+                    android:layout_marginBottom="@dimen/success_section_title_margin_bottom" />
 
                 <!-- Passenger Name -->
                 <androidx.appcompat.widget.LinearLayoutCompat
@@ -392,14 +392,14 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
-                    android:layout_marginBottom="12dp">
+                    android:layout_marginBottom="@dimen/success_passenger_row_margin_bottom">
 
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="@dimen/success_passenger_icon_size"
+                        android:layout_height="@dimen/success_passenger_icon_size"
                         app:srcCompat="@drawable/ic_user"
                         app:tint="#7B8FA3"
-                        android:layout_marginEnd="12dp" />
+                        android:layout_marginEnd="@dimen/success_passenger_icon_margin_end" />
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/confirmation_LBL_passenger_name"
@@ -407,7 +407,7 @@
                         android:layout_height="wrap_content"
                         tools:text="John Doe"
                         android:textColor="#2C3E50"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/success_passenger_text_size" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -417,14 +417,14 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
-                    android:layout_marginBottom="12dp">
+                    android:layout_marginBottom="@dimen/success_passenger_row_margin_bottom">
 
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="@dimen/success_passenger_icon_size"
+                        android:layout_height="@dimen/success_passenger_icon_size"
                         app:srcCompat="@drawable/ic_email"
                         app:tint="#7B8FA3"
-                        android:layout_marginEnd="12dp" />
+                        android:layout_marginEnd="@dimen/success_passenger_icon_margin_end" />
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/confirmation_LBL_email"
@@ -432,7 +432,7 @@
                         android:layout_height="wrap_content"
                         tools:text="john.doe@email.com"
                         android:textColor="#2C3E50"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/success_passenger_text_size" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -444,11 +444,11 @@
                     android:gravity="center_vertical">
 
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="@dimen/success_passenger_icon_size"
+                        android:layout_height="@dimen/success_passenger_icon_size"
                         app:srcCompat="@drawable/ic_phone"
                         app:tint="#7B8FA3"
-                        android:layout_marginEnd="12dp" />
+                        android:layout_marginEnd="@dimen/success_passenger_icon_margin_end" />
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/confirmation_LBL_phone"
@@ -456,7 +456,7 @@
                         android:layout_height="wrap_content"
                         tools:text="+972 50-123-4567"
                         android:textColor="#2C3E50"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/success_passenger_text_size" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -468,18 +468,18 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/confirmation_BTN_home"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="@dimen/success_home_btn_height"
             android:text="@string/back_to_home"
-            android:textSize="18sp"
+            android:textSize="@dimen/success_home_btn_text_size"
             android:textStyle="bold"
             android:textColor="@color/white"
-            app:cornerRadius="30dp"
+            app:cornerRadius="@dimen/success_home_btn_corner_radius"
             android:backgroundTint="#4A6EC8"
-            app:elevation="4dp"
+            app:elevation="@dimen/success_home_btn_elevation"
             app:icon="@drawable/ic_home"
             app:iconGravity="textStart"
             app:iconTint="@color/white"
-            android:layout_marginBottom="40dp" />
+            android:layout_marginBottom="@dimen/success_home_btn_margin_bottom" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

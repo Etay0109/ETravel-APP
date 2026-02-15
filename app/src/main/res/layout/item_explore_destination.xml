@@ -4,23 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="16dp"
-    app:cardCornerRadius="16dp"
-    app:cardElevation="4dp"
+    android:layout_marginBottom="@dimen/explore_card_margin_bottom"
+    app:cardCornerRadius="@dimen/explore_card_corner_radius"
+    app:cardElevation="@dimen/explore_card_elevation"
     app:cardBackgroundColor="@color/white"
     android:clickable="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="12dp">
+        android:padding="@dimen/explore_card_padding">
 
         <!-- Destination Image -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/item_explore_CARD_image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            app:cardCornerRadius="12dp"
+            android:layout_width="@dimen/explore_image_size"
+            android:layout_height="@dimen/explore_image_size"
+            app:cardCornerRadius="@dimen/explore_image_corner_radius"
             app:cardElevation="0dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -40,7 +40,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="@dimen/explore_info_margin_start"
             android:gravity="start"
             app:layout_constraintTop_toTopOf="@id/item_explore_CARD_image"
             app:layout_constraintBottom_toBottomOf="@id/item_explore_CARD_image"
@@ -52,7 +52,7 @@
                 android:id="@+id/item_explore_LBL_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="@dimen/explore_city_text_size"
                 android:textStyle="bold"
                 android:textColor="#1E3A5F"
                 android:gravity="start"
@@ -65,20 +65,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="@dimen/explore_country_margin_top"
                 android:gravity="center_vertical">
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
+                    android:layout_width="@dimen/explore_country_icon_size"
+                    android:layout_height="@dimen/explore_country_icon_size"
                     android:src="@drawable/ic_location_pin" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/item_explore_LBL_country"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:textSize="14sp"
+                    android:layout_marginStart="@dimen/explore_country_margin_start"
+                    android:textSize="@dimen/explore_country_text_size"
                     android:textColor="#8B9CAD"
                     android:gravity="start"
                     tools:text="Country" />
@@ -89,12 +89,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/explore_flight_margin_top"
                 android:gravity="center_vertical">
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
+                    android:layout_width="@dimen/explore_flight_icon_size"
+                    android:layout_height="@dimen/explore_flight_icon_size"
                     android:src="@drawable/ic_flight"
                     app:tint="#2D5F8D" />
 
@@ -102,8 +102,8 @@
                     android:id="@+id/item_explore_LBL_flightTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:textSize="13sp"
+                    android:layout_marginStart="@dimen/explore_flight_margin_start"
+                    android:textSize="@dimen/explore_flight_text_size"
                     android:textColor="#2D5F8D"
                     android:textStyle="bold"
                     android:gravity="start"
@@ -114,10 +114,10 @@
         <!-- Favorite Button -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/item_explore_CARD_favorite"
-            android:layout_width="44dp"
-            android:layout_height="44dp"
-            app:cardCornerRadius="22dp"
-            app:cardElevation="2dp"
+            android:layout_width="@dimen/explore_favorite_size"
+            android:layout_height="@dimen/explore_favorite_size"
+            app:cardCornerRadius="@dimen/explore_favorite_corner_radius"
+            app:cardElevation="@dimen/explore_favorite_elevation"
             app:cardBackgroundColor="#F5F7FA"
             android:clickable="true"
             app:layout_constraintTop_toTopOf="@id/item_explore_CARD_image"
@@ -127,7 +127,7 @@
                 android:id="@+id/item_explore_IMG_favorite"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="12dp"
+                android:padding="@dimen/explore_favorite_icon_padding"
                 android:src="@drawable/ic_heart"
                 app:tint="#FF6B6B" />
         </com.google.android.material.card.MaterialCardView>

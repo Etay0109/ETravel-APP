@@ -33,32 +33,32 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="24dp">
+                    android:padding="@dimen/booking_form_inner_padding">
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/booking_LBL_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginBottom="24dp"
+                        android:layout_marginBottom="@dimen/booking_form_title_margin_bottom"
                         android:text="@string/book_your_flight_label"
                         android:textColor="#1E3A5F"
-                        android:textSize="28sp"
+                        android:textSize="@dimen/booking_form_title_text_size"
                         android:textStyle="bold" />
 
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/booking_CV_summary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="24dp"
+                        android:layout_marginBottom="@dimen/booking_form_summary_margin_bottom"
                         app:cardBackgroundColor="#F0F4F8"
-                        app:cardCornerRadius="12dp"
+                        app:cardCornerRadius="@dimen/booking_form_summary_corner_radius"
                         app:cardElevation="0dp">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:padding="16dp">
+                            android:padding="@dimen/booking_form_summary_padding">
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/booking_LBL_price"
@@ -66,7 +66,7 @@
                                 android:layout_height="wrap_content"
                                 tools:text="500$"
                                 android:textColor="#4A6EC8"
-                                android:textSize="24sp"
+                                android:textSize="@dimen/booking_form_price_text_size"
                                 android:textStyle="bold"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +78,7 @@
                                 android:layout_height="wrap_content"
                                 tools:text="Flight to Paris"
                                 android:textColor="#1E3A5F"
-                                android:textSize="16sp"
+                                android:textSize="@dimen/booking_form_destination_text_size"
                                 android:textStyle="bold"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
@@ -86,10 +86,10 @@
                             <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
+                                android:layout_marginTop="@dimen/booking_form_price_label_margin_top"
                                 android:text="@string/price"
                                 android:textColor="#5A7A99"
-                                android:textSize="12sp"
+                                android:textSize="@dimen/booking_form_price_label_text_size"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toBottomOf="@id/booking_LBL_destination" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -98,25 +98,25 @@
                     <com.google.android.material.textview.MaterialTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
+                        android:layout_marginBottom="@dimen/booking_form_section_title_margin_bottom"
                         android:text="@string/personal_information"
                         android:textColor="#1E3A5F"
-                        android:textSize="18sp"
+                        android:textSize="@dimen/booking_form_section_title_text_size"
                         android:textStyle="bold" />
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginBottom="@dimen/booking_form_field_margin_bottom"
                         app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="4dp">
+                        app:cardCornerRadius="@dimen/booking_form_field_corner_radius"
+                        app:cardElevation="@dimen/booking_form_field_elevation">
 
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:padding="12dp">
+                            android:padding="@dimen/booking_form_field_padding">
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
@@ -128,7 +128,7 @@
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp">
+                                android:layout_marginTop="@dimen/booking_form_field_inner_margin_top">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/booking_EDT_first_name"
@@ -143,8 +143,8 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/icon_fname"
-                                    android:layout_width="24dp"
-                                    android:layout_height="24dp"
+                                    android:layout_width="@dimen/booking_form_field_icon_size"
+                                    android:layout_height="@dimen/booking_form_field_icon_size"
                                     android:layout_alignParentEnd="true"
                                     android:layout_centerVertical="true"
                                     android:src="@drawable/ic_user"
@@ -156,16 +156,16 @@
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginBottom="@dimen/booking_form_field_margin_bottom"
                         app:cardBackgroundColor="@color/white"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="4dp">
+                        app:cardCornerRadius="@dimen/booking_form_field_corner_radius"
+                        app:cardElevation="@dimen/booking_form_field_elevation">
 
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:padding="12dp">
+                            android:padding="@dimen/booking_form_field_padding">
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
@@ -177,7 +177,7 @@
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp">
+                                android:layout_marginTop="@dimen/booking_form_field_inner_margin_top">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/booking_EDT_last_name"
@@ -192,8 +192,8 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/icon_lname"
-                                    android:layout_width="24dp"
-                                    android:layout_height="24dp"
+                                    android:layout_width="@dimen/booking_form_field_icon_size"
+                                    android:layout_height="@dimen/booking_form_field_icon_size"
                                     android:layout_alignParentEnd="true"
                                     android:layout_centerVertical="true"
                                     android:src="@drawable/ic_user"
@@ -205,16 +205,16 @@
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginBottom="@dimen/booking_form_field_margin_bottom"
                         app:cardBackgroundColor="@color/white"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="4dp">
+                        app:cardCornerRadius="@dimen/booking_form_field_corner_radius"
+                        app:cardElevation="@dimen/booking_form_field_elevation">
 
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:padding="12dp">
+                            android:padding="@dimen/booking_form_field_padding">
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
@@ -226,7 +226,7 @@
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp">
+                                android:layout_marginTop="@dimen/booking_form_field_inner_margin_top">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/booking_EDT_id_number"
@@ -241,8 +241,8 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/icon_id"
-                                    android:layout_width="24dp"
-                                    android:layout_height="24dp"
+                                    android:layout_width="@dimen/booking_form_field_icon_size"
+                                    android:layout_height="@dimen/booking_form_field_icon_size"
                                     android:layout_alignParentEnd="true"
                                     android:layout_centerVertical="true"
                                     android:src="@drawable/ic_id_card"
@@ -254,16 +254,16 @@
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginBottom="@dimen/booking_form_field_margin_bottom"
                         app:cardBackgroundColor="@color/white"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="4dp">
+                        app:cardCornerRadius="@dimen/booking_form_field_corner_radius"
+                        app:cardElevation="@dimen/booking_form_field_elevation">
 
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:padding="12dp">
+                            android:padding="@dimen/booking_form_field_padding">
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
@@ -275,7 +275,7 @@
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp">
+                                android:layout_marginTop="@dimen/booking_form_field_inner_margin_top">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/booking_EDT_email"
@@ -290,8 +290,8 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/icon_email"
-                                    android:layout_width="24dp"
-                                    android:layout_height="24dp"
+                                    android:layout_width="@dimen/booking_form_field_icon_size"
+                                    android:layout_height="@dimen/booking_form_field_icon_size"
                                     android:layout_alignParentEnd="true"
                                     android:layout_centerVertical="true"
                                     android:src="@drawable/ic_email"
@@ -303,16 +303,16 @@
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="24dp"
+                        android:layout_marginBottom="@dimen/booking_form_email_margin_bottom"
                         app:cardBackgroundColor="@color/white"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="4dp">
+                        app:cardCornerRadius="@dimen/booking_form_field_corner_radius"
+                        app:cardElevation="@dimen/booking_form_field_elevation">
 
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:padding="12dp">
+                            android:padding="@dimen/booking_form_field_padding">
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
@@ -324,7 +324,7 @@
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp">
+                                android:layout_marginTop="@dimen/booking_form_field_inner_margin_top">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/booking_EDT_phone"
@@ -339,8 +339,8 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/icon_phone"
-                                    android:layout_width="24dp"
-                                    android:layout_height="24dp"
+                                    android:layout_width="@dimen/booking_form_field_icon_size"
+                                    android:layout_height="@dimen/booking_form_field_icon_size"
                                     android:layout_alignParentEnd="true"
                                     android:layout_centerVertical="true"
                                     android:src="@drawable/ic_phone"
@@ -353,25 +353,25 @@
                     <com.google.android.material.textview.MaterialTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
+                        android:layout_marginBottom="@dimen/booking_form_section_title_margin_bottom"
                         android:text="@string/flight_details"
                         android:textColor="#1E3A5F"
-                        android:textSize="18sp"
+                        android:textSize="@dimen/booking_form_section_title_text_size"
                         android:textStyle="bold" />
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginBottom="@dimen/booking_form_field_margin_bottom"
                         app:cardBackgroundColor="@color/white"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="4dp">
+                        app:cardCornerRadius="@dimen/booking_form_field_corner_radius"
+                        app:cardElevation="@dimen/booking_form_field_elevation">
 
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:padding="12dp">
+                            android:padding="@dimen/booking_form_field_padding">
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
@@ -383,7 +383,7 @@
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp">
+                                android:layout_marginTop="@dimen/booking_form_field_inner_margin_top">
 
                                 <AutoCompleteTextView
                                     android:id="@+id/booking_EDT_airline"
@@ -400,8 +400,8 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/icon_airline"
-                                    android:layout_width="24dp"
-                                    android:layout_height="24dp"
+                                    android:layout_width="@dimen/booking_form_field_icon_size"
+                                    android:layout_height="@dimen/booking_form_field_icon_size"
                                     android:layout_alignParentEnd="true"
                                     android:layout_centerVertical="true"
                                     android:src="@drawable/ic_flight"
@@ -413,16 +413,16 @@
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginBottom="@dimen/booking_form_field_margin_bottom"
                         app:cardBackgroundColor="@color/white"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="4dp">
+                        app:cardCornerRadius="@dimen/booking_form_field_corner_radius"
+                        app:cardElevation="@dimen/booking_form_field_elevation">
 
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:padding="12dp">
+                            android:padding="@dimen/booking_form_field_padding">
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
@@ -434,7 +434,7 @@
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp">
+                                android:layout_marginTop="@dimen/booking_form_field_inner_margin_top">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/booking_EDT_departure_date"
@@ -450,8 +450,8 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/icon_dep"
-                                    android:layout_width="24dp"
-                                    android:layout_height="24dp"
+                                    android:layout_width="@dimen/booking_form_field_icon_size"
+                                    android:layout_height="@dimen/booking_form_field_icon_size"
                                     android:layout_alignParentEnd="true"
                                     android:layout_centerVertical="true"
                                     android:src="@drawable/ic_calender"
@@ -463,16 +463,16 @@
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginBottom="@dimen/booking_form_field_margin_bottom"
                         app:cardBackgroundColor="@color/white"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="4dp">
+                        app:cardCornerRadius="@dimen/booking_form_field_corner_radius"
+                        app:cardElevation="@dimen/booking_form_field_elevation">
 
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:padding="12dp">
+                            android:padding="@dimen/booking_form_field_padding">
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
@@ -484,7 +484,7 @@
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp">
+                                android:layout_marginTop="@dimen/booking_form_field_inner_margin_top">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/booking_EDT_return_date"
@@ -500,8 +500,8 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/icon_ret"
-                                    android:layout_width="24dp"
-                                    android:layout_height="24dp"
+                                    android:layout_width="@dimen/booking_form_field_icon_size"
+                                    android:layout_height="@dimen/booking_form_field_icon_size"
                                     android:layout_alignParentEnd="true"
                                     android:layout_centerVertical="true"
                                     android:src="@drawable/ic_calender"
@@ -513,26 +513,26 @@
                     <com.google.android.material.textview.MaterialTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="@dimen/booking_form_section_title_margin_bottom"
+                        android:layout_marginTop="@dimen/booking_form_payment_section_margin_top"
                         android:text="@string/payment_information"
                         android:textColor="#1E3A5F"
-                        android:textSize="18sp"
+                        android:textSize="@dimen/booking_form_section_title_text_size"
                         android:textStyle="bold" />
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginBottom="@dimen/booking_form_field_margin_bottom"
                         app:cardBackgroundColor="@color/white"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="4dp">
+                        app:cardCornerRadius="@dimen/booking_form_field_corner_radius"
+                        app:cardElevation="@dimen/booking_form_field_elevation">
 
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:padding="12dp">
+                            android:padding="@dimen/booking_form_field_padding">
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
@@ -544,7 +544,7 @@
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp">
+                                android:layout_marginTop="@dimen/booking_form_field_inner_margin_top">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/booking_EDT_card_number"
@@ -560,8 +560,8 @@
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/icon_card"
-                                    android:layout_width="24dp"
-                                    android:layout_height="24dp"
+                                    android:layout_width="@dimen/booking_form_field_icon_size"
+                                    android:layout_height="@dimen/booking_form_field_icon_size"
                                     android:layout_alignParentEnd="true"
                                     android:layout_centerVertical="true"
                                     android:src="@drawable/ic_credit_card"
@@ -573,24 +573,24 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginBottom="@dimen/booking_form_field_margin_bottom"
                         android:baselineAligned="false"
                         android:orientation="horizontal">
 
                         <com.google.android.material.card.MaterialCardView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
+                            android:layout_marginEnd="@dimen/booking_form_card_half_margin"
                             android:layout_weight="1"
                             app:cardBackgroundColor="@android:color/white"
-                            app:cardCornerRadius="12dp"
-                            app:cardElevation="4dp">
+                            app:cardCornerRadius="@dimen/booking_form_field_corner_radius"
+                            app:cardElevation="@dimen/booking_form_field_elevation">
 
                             <androidx.appcompat.widget.LinearLayoutCompat
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical"
-                                android:padding="12dp">
+                                android:padding="@dimen/booking_form_field_padding">
 
                                 <com.google.android.material.textview.MaterialTextView
                                     android:layout_width="wrap_content"
@@ -614,17 +614,17 @@
                         <com.google.android.material.card.MaterialCardView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
+                            android:layout_marginStart="@dimen/booking_form_card_half_margin"
                             android:layout_weight="1"
                             app:cardBackgroundColor="@android:color/white"
-                            app:cardCornerRadius="12dp"
-                            app:cardElevation="4dp">
+                            app:cardCornerRadius="@dimen/booking_form_field_corner_radius"
+                            app:cardElevation="@dimen/booking_form_field_elevation">
 
                             <androidx.appcompat.widget.LinearLayoutCompat
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical"
-                                android:padding="12dp">
+                                android:padding="@dimen/booking_form_field_padding">
 
                                 <com.google.android.material.textview.MaterialTextView
                                     android:layout_width="wrap_content"
@@ -649,15 +649,15 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/booking_BTN_submit"
                         android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_marginBottom="20dp"
+                        android:layout_height="@dimen/booking_form_submit_height"
+                        android:layout_marginBottom="@dimen/booking_form_submit_margin_bottom"
                         android:backgroundTint="#4A6EC8"
                         android:text="@string/book_now"
                         android:textColor="@color/white"
-                        android:textSize="18sp"
+                        android:textSize="@dimen/booking_form_submit_text_size"
                         android:textStyle="bold"
-                        app:cornerRadius="30dp"
-                        app:elevation="4dp" />
+                        app:cornerRadius="@dimen/booking_form_submit_corner_radius"
+                        app:elevation="@dimen/booking_form_submit_elevation" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
             </com.google.android.material.card.MaterialCardView>
@@ -674,8 +674,8 @@
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/booking_LOTTIE_loading"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
+            android:layout_width="@dimen/booking_form_loading_size"
+            android:layout_height="@dimen/booking_form_loading_size"
             android:layout_gravity="center"
             app:lottie_rawRes="@raw/loading_booking"
             app:lottie_loop="true" />
@@ -683,4 +683,3 @@
     </FrameLayout>
 
 </FrameLayout>
-

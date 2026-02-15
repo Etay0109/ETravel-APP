@@ -1,13 +1,12 @@
 package com.example.etravelapp.utilities
 
-import android.animation.Animator
 import android.view.View
 import com.airbnb.lottie.LottieAnimationView
 
 class SplashScreenManager(
     private val overlayView: View,
     private val lottieView: LottieAnimationView,
-    private val onFinished: () -> Unit
+    private val onFinished: (() -> Unit)? = null
 ) {
 
     private var finishedCalled = false
@@ -24,6 +23,6 @@ class SplashScreenManager(
 
         lottieView.cancelAnimation()
         overlayView.visibility = View.GONE
-        onFinished()
+        onFinished?.invoke()
     }
 }

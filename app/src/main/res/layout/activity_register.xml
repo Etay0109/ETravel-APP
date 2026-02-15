@@ -90,7 +90,7 @@
                         android:layout_marginTop="@dimen/register_card_marginTop"
                         app:cardBackgroundColor="@color/white"
                         app:cardCornerRadius="@dimen/register_field_corner_radius"
-                        app:cardElevation="2dp"
+                        app:cardElevation="@dimen/register_field_card_elevation"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/register_LBL_subtitle">
@@ -156,7 +156,7 @@
                         android:layout_marginTop="@dimen/register_card_marginTop"
                         app:cardBackgroundColor="@color/white"
                         app:cardCornerRadius="@dimen/register_field_corner_radius"
-                        app:cardElevation="2dp"
+                        app:cardElevation="@dimen/register_field_card_elevation"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/register_CARD_username">
@@ -183,7 +183,7 @@
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="6dp"
+                                android:layout_marginTop="@dimen/register_field_inner_margin_top"
                                 android:layoutDirection="ltr">
 
                                 <EditText
@@ -222,7 +222,7 @@
                         android:layout_marginTop="@dimen/register_card_marginTop"
                         app:cardBackgroundColor="#FFFFFF"
                         app:cardCornerRadius="@dimen/register_field_corner_radius"
-                        app:cardElevation="2dp"
+                        app:cardElevation="@dimen/register_field_card_elevation"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/register_CARD_email">
@@ -249,7 +249,7 @@
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="6dp"
+                                android:layout_marginTop="@dimen/register_field_inner_margin_top"
                                 android:layoutDirection="ltr">
 
                                 <EditText
@@ -289,7 +289,7 @@
                         android:layout_marginTop="@dimen/register_card_marginTop"
                         app:cardBackgroundColor="@color/white"
                         app:cardCornerRadius="@dimen/register_card_corner_radius"
-                        app:cardElevation="2dp"
+                        app:cardElevation="@dimen/register_field_card_elevation"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/register_CARD_password">
@@ -316,7 +316,7 @@
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="6dp"
+                                android:layout_marginTop="@dimen/register_field_inner_margin_top"
                                 android:layoutDirection="ltr">
 
                                 <EditText
@@ -360,7 +360,7 @@
                         android:textStyle="bold"
                         app:backgroundTint="#2D5F8D"
                         app:cornerRadius="@dimen/sign_up_button_corner_radius"
-                        app:elevation="4dp"
+                        app:elevation="@dimen/register_btn_elevation"
                         app:iconGravity="end"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"

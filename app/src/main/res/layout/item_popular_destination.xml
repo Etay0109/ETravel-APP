@@ -2,12 +2,12 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="180dp"
-    android:layout_height="240dp"
-    android:layout_margin="8dp"
+    android:layout_width="@dimen/popular_card_width"
+    android:layout_height="@dimen/popular_card_height"
+    android:layout_margin="@dimen/popular_card_margin"
     android:clickable="true"
-    app:cardCornerRadius="16dp"
-    app:cardElevation="4dp">
+    app:cardCornerRadius="@dimen/popular_card_corner_radius"
+    app:cardElevation="@dimen/popular_card_elevation">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="@dimen/popular_gradient_height"
             android:background="@drawable/gradient_black_bottom"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -36,21 +36,21 @@
         <!-- Favorite Button -->
         <androidx.cardview.widget.CardView
             android:id="@+id/popular_CV_favorite"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="@dimen/popular_favorite_size"
+            android:layout_height="@dimen/popular_favorite_size"
+            android:layout_marginTop="@dimen/popular_favorite_margin"
+            android:layout_marginEnd="@dimen/popular_favorite_margin"
             android:clickable="true"
             app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="18dp"
-            app:cardElevation="2dp"
+            app:cardCornerRadius="@dimen/popular_favorite_corner_radius"
+            app:cardElevation="@dimen/popular_favorite_elevation"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/popular_IMG_favorite"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="@dimen/popular_favorite_icon_size"
+                android:layout_height="@dimen/popular_favorite_icon_size"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_heart"
                 app:tint="#FF3D00"
@@ -62,10 +62,10 @@
             android:id="@+id/popular_LBL_city"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginStart="@dimen/popular_city_margin_start"
+            android:layout_marginBottom="@dimen/popular_city_margin_bottom"
             android:textColor="@color/white"
-            android:textSize="22sp"
+            android:textSize="@dimen/popular_city_text_size"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/popular_LBL_country"
             app:layout_constraintStart_toStartOf="parent"
@@ -74,9 +74,9 @@
         <!-- Location Icon -->
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/popular_IMG_location"
-            android:layout_width="14dp"
-            android:layout_height="14dp"
-            android:layout_marginStart="16dp"
+            android:layout_width="@dimen/popular_location_icon_size"
+            android:layout_height="@dimen/popular_location_icon_size"
+            android:layout_marginStart="@dimen/popular_location_margin_start"
             android:src="@drawable/ic_location_pin"
             app:layout_constraintBottom_toBottomOf="@id/popular_LBL_country"
             app:layout_constraintStart_toStartOf="parent"
@@ -87,10 +87,10 @@
             android:id="@+id/popular_LBL_country"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginStart="@dimen/popular_country_margin_start"
+            android:layout_marginBottom="@dimen/popular_country_margin_bottom"
             android:textColor="#E0E0E0"
-            android:textSize="14sp"
+            android:textSize="@dimen/popular_country_text_size"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/popular_IMG_location"
             tools:text="Country" />

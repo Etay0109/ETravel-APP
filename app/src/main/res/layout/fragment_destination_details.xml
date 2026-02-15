@@ -20,12 +20,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingBottom="24dp">
+            android:paddingBottom="@dimen/details_content_padding_bottom">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/details_LAY_header"
                 android:layout_width="match_parent"
-                android:layout_height="380dp">
+                android:layout_height="@dimen/details_header_height">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/details_IMG_header"
@@ -40,20 +40,20 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="160dp"
+                    android:layout_height="@dimen/details_gradient_height"
                     android:background="@drawable/gradient_black_bottom"
                     app:layout_constraintBottom_toBottomOf="parent" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/details_BTN_back"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="48dp"
+                    android:layout_width="@dimen/details_back_btn_size"
+                    android:layout_height="@dimen/details_back_btn_size"
+                    android:layout_marginStart="@dimen/details_back_btn_margin_start"
+                    android:layout_marginTop="@dimen/details_back_btn_margin_top"
                     android:background="@drawable/bg_circle_white"
-                    android:elevation="6dp"
+                    android:elevation="@dimen/details_back_btn_elevation"
                     android:src="@drawable/ic_back"
-                    android:padding="8dp"
+                    android:padding="@dimen/details_back_btn_padding"
                     android:scaleType="fitCenter"
                     app:tint="#1A2B48"
                     app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +63,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="18dp"
+                    android:padding="@dimen/details_header_content_padding"
                     app:layout_constraintBottom_toBottomOf="parent">
 
                     <com.google.android.material.textview.MaterialTextView
@@ -72,7 +72,7 @@
                         android:layout_height="wrap_content"
                         tools:text="City"
                         android:textColor="@color/white"
-                        android:textSize="40sp"
+                        android:textSize="@dimen/details_city_text_size"
                         android:textStyle="bold" />
 
                     <androidx.appcompat.widget.LinearLayoutCompat
@@ -82,18 +82,18 @@
                         android:orientation="horizontal">
 
                         <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="16dp"
-                            android:layout_height="16dp"
+                            android:layout_width="@dimen/details_location_icon_size"
+                            android:layout_height="@dimen/details_location_icon_size"
                             android:src="@drawable/ic_location_pin" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/details_LBL_country"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="4dp"
+                            android:layout_marginStart="@dimen/details_country_margin_start"
                             tools:text="Country"
                             android:textColor="#E0E0E0"
-                            android:textSize="18sp" />
+                            android:textSize="@dimen/details_country_text_size" />
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -103,34 +103,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="24dp">
+                android:padding="@dimen/details_section_padding">
 
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Description"
                     android:textColor="#1A2B48"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/details_section_title_text_size"
                     android:textStyle="bold" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/details_LBL_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:lineSpacingExtra="6dp"
+                    android:layout_marginTop="@dimen/details_description_margin_top"
+                    android:lineSpacingExtra="@dimen/details_description_line_spacing"
                     tools:text="Text Description"
                     android:textColor="#566275"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/details_description_text_size" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="@dimen/details_places_margin_top"
+                    android:layout_marginBottom="@dimen/details_places_margin_bottom"
                     android:text="Places to Visit"
                     android:textColor="#1A2B48"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/details_section_title_text_size"
                     android:textStyle="bold" />
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -143,11 +143,11 @@
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="@dimen/details_travel_info_margin_top"
+                    android:layout_marginBottom="@dimen/details_travel_info_margin_bottom"
                     android:text="Travel Information"
                     android:textColor="#1A2B48"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/details_section_title_text_size"
                     android:textStyle="bold" />
 
                 <androidx.appcompat.widget.LinearLayoutCompat
@@ -165,10 +165,10 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginBottom="12dp"
+                            android:layout_marginEnd="@dimen/details_info_card_margin_horizontal"
+                            android:layout_marginBottom="@dimen/details_info_card_margin_bottom"
                             app:cardBackgroundColor="#F5F7FA"
-                            app:cardCornerRadius="16dp"
+                            app:cardCornerRadius="@dimen/details_info_card_corner_radius"
                             app:cardElevation="0dp">
 
                             <androidx.appcompat.widget.LinearLayoutCompat
@@ -176,29 +176,29 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:orientation="vertical"
-                                android:padding="20dp">
+                                android:padding="@dimen/details_info_card_padding">
 
                                 <androidx.appcompat.widget.AppCompatImageView
-                                    android:layout_width="32dp"
-                                    android:layout_height="32dp"
+                                    android:layout_width="@dimen/details_info_icon_size"
+                                    android:layout_height="@dimen/details_info_icon_size"
                                     android:src="@drawable/ic_plane" />
 
                                 <com.google.android.material.textview.MaterialTextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="8dp"
+                                    android:layout_marginTop="@dimen/details_info_label_margin_top"
                                     android:text="Flight Time"
                                     android:textColor="#9E9E9E"
-                                    android:textSize="12sp" />
+                                    android:textSize="@dimen/details_info_label_text_size" />
 
                                 <com.google.android.material.textview.MaterialTextView
                                     android:id="@+id/details_LBL_flight_time"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="4dp"
+                                    android:layout_marginTop="@dimen/details_info_value_margin_top"
                                     tools:text="4h 30m"
                                     android:textColor="#1A2B48"
-                                    android:textSize="16sp"
+                                    android:textSize="@dimen/details_info_value_text_size"
                                     android:textStyle="bold" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
                         </com.google.android.material.card.MaterialCardView>
@@ -207,10 +207,10 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginBottom="12dp"
+                            android:layout_marginStart="@dimen/details_info_card_margin_horizontal"
+                            android:layout_marginBottom="@dimen/details_info_card_margin_bottom"
                             app:cardBackgroundColor="#F5F7FA"
-                            app:cardCornerRadius="16dp"
+                            app:cardCornerRadius="@dimen/details_info_card_corner_radius"
                             app:cardElevation="0dp">
 
                             <androidx.appcompat.widget.LinearLayoutCompat
@@ -218,29 +218,29 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:orientation="vertical"
-                                android:padding="20dp">
+                                android:padding="@dimen/details_info_card_padding">
 
                                 <androidx.appcompat.widget.AppCompatImageView
-                                    android:layout_width="32dp"
-                                    android:layout_height="32dp"
+                                    android:layout_width="@dimen/details_info_icon_size"
+                                    android:layout_height="@dimen/details_info_icon_size"
                                     android:src="@drawable/ic_thermometer" />
 
                                 <com.google.android.material.textview.MaterialTextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="8dp"
+                                    android:layout_marginTop="@dimen/details_info_label_margin_top"
                                     android:text="Best Season"
                                     android:textColor="#9E9E9E"
-                                    android:textSize="12sp" />
+                                    android:textSize="@dimen/details_info_label_text_size" />
 
                                 <com.google.android.material.textview.MaterialTextView
                                     android:id="@+id/details_LBL_best_season"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="4dp"
+                                    android:layout_marginTop="@dimen/details_info_value_margin_top"
                                     tools:text="Spring"
                                     android:textColor="#1A2B48"
-                                    android:textSize="16sp"
+                                    android:textSize="@dimen/details_info_value_text_size"
                                     android:textStyle="bold" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
                         </com.google.android.material.card.MaterialCardView>
@@ -256,10 +256,10 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="@dimen/details_info_card_margin_horizontal"
+                            android:layout_marginTop="@dimen/details_info_card_margin_top"
                             app:cardBackgroundColor="#F5F7FA"
-                            app:cardCornerRadius="16dp"
+                            app:cardCornerRadius="@dimen/details_info_card_corner_radius"
                             app:cardElevation="0dp">
 
                             <androidx.appcompat.widget.LinearLayoutCompat
@@ -267,29 +267,29 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:orientation="vertical"
-                                android:padding="20dp">
+                                android:padding="@dimen/details_info_card_padding">
 
                                 <androidx.appcompat.widget.AppCompatImageView
-                                    android:layout_width="32dp"
-                                    android:layout_height="32dp"
+                                    android:layout_width="@dimen/details_info_icon_size"
+                                    android:layout_height="@dimen/details_info_icon_size"
                                     android:src="@drawable/ic_money_bag" />
 
                                 <com.google.android.material.textview.MaterialTextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="8dp"
+                                    android:layout_marginTop="@dimen/details_info_label_margin_top"
                                     android:text="Avg. Cost"
                                     android:textColor="#9E9E9E"
-                                    android:textSize="12sp" />
+                                    android:textSize="@dimen/details_info_label_text_size" />
 
                                 <com.google.android.material.textview.MaterialTextView
                                     android:id="@+id/details_LBL_avg_cost"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="4dp"
+                                    android:layout_marginTop="@dimen/details_info_value_margin_top"
                                     tools:text="$150/day"
                                     android:textColor="#1A2B48"
-                                    android:textSize="16sp"
+                                    android:textSize="@dimen/details_info_value_text_size"
                                     android:textStyle="bold" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
                         </com.google.android.material.card.MaterialCardView>
@@ -298,10 +298,10 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="4dp"
+                            android:layout_marginStart="@dimen/details_info_card_margin_horizontal"
+                            android:layout_marginTop="@dimen/details_info_card_margin_top"
                             app:cardBackgroundColor="#F5F7FA"
-                            app:cardCornerRadius="16dp"
+                            app:cardCornerRadius="@dimen/details_info_card_corner_radius"
                             app:cardElevation="0dp">
 
                             <androidx.appcompat.widget.LinearLayoutCompat
@@ -309,29 +309,29 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:orientation="vertical"
-                                android:padding="20dp">
+                                android:padding="@dimen/details_info_card_padding">
 
                                 <androidx.appcompat.widget.AppCompatImageView
-                                    android:layout_width="32dp"
-                                    android:layout_height="32dp"
+                                    android:layout_width="@dimen/details_info_icon_size"
+                                    android:layout_height="@dimen/details_info_icon_size"
                                     android:src="@drawable/ic_speaking_head" />
 
                                 <com.google.android.material.textview.MaterialTextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="8dp"
+                                    android:layout_marginTop="@dimen/details_info_label_margin_top"
                                     android:text="Language"
                                     android:textColor="#9E9E9E"
-                                    android:textSize="12sp" />
+                                    android:textSize="@dimen/details_info_label_text_size" />
 
                                 <com.google.android.material.textview.MaterialTextView
                                     android:id="@+id/details_LBL_language"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="4dp"
+                                    android:layout_marginTop="@dimen/details_info_value_margin_top"
                                     tools:text="English"
                                     android:textColor="#1A2B48"
-                                    android:textSize="16sp"
+                                    android:textSize="@dimen/details_info_value_text_size"
                                     android:textStyle="bold" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
                         </com.google.android.material.card.MaterialCardView>
@@ -343,15 +343,15 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/details_BTN_book"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginBottom="32dp"
+                android:layout_height="@dimen/details_book_btn_height"
+                android:layout_marginTop="@dimen/details_book_btn_margin_vertical"
+                android:layout_marginBottom="@dimen/details_book_btn_margin_vertical"
                 android:backgroundTint="#365486"
                 android:text="Book Flight"
                 android:textAllCaps="false"
-                android:textSize="18sp"
+                android:textSize="@dimen/details_book_btn_text_size"
                 android:textStyle="bold"
-                app:cornerRadius="30dp" />
+                app:cornerRadius="@dimen/details_book_btn_corner_radius" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.core.widget.NestedScrollView>

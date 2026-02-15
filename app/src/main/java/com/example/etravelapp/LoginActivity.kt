@@ -51,12 +51,9 @@ class LoginActivity : AppCompatActivity() {
 
         splashManager = SplashScreenManager(
             overlayView = binding.loginOVERLAYLoading,
-            lottieView = binding.loginLOTTIELoading,
-            onFinished = {
-                startActivity(Intent(this, MainActivity::class.java))
-                finish()
-            }
+            lottieView = binding.loginLOTTIELoading
         )
+
 
 
         auth = FirebaseAuth.getInstance()
