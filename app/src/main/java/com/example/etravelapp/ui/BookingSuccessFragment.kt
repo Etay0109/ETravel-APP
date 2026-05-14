@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import com.example.etravelapp.R
 import com.example.etravelapp.databinding.FragmentBookingSuccessBinding
 import com.example.etravelapp.model.DestinationItem
@@ -23,7 +22,6 @@ class BookingSuccessFragment : Fragment() {
     private lateinit var lastName: String
     private lateinit var email: String
     private lateinit var phone: String
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,7 +43,12 @@ class BookingSuccessFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentBookingSuccessBinding.inflate(inflater, container, false)
+        _binding = FragmentBookingSuccessBinding.inflate(
+            inflater,
+            container,
+            false
+        )
+
         return binding.root
     }
 
@@ -54,23 +57,15 @@ class BookingSuccessFragment : Fragment() {
 
         bindConfirmationData()
         setupButtons()
-
-        binding.confirmationBTNHome.setOnClickListener {
-            navigateToHome()
-        }
-
     }
 
-    private fun bindConfirmationData() {
+    private fun bindConfirmationData() {    // Displays the booking confirmation details on the screen
 
-        // Generate a simple booking reference
         val bookingReference = (10000000..99999999).random().toString()
-
 
         binding.confirmationLBLReference.text =
             "Booking #$bookingReference"
 
-        // Flight details
         binding.confirmationLBLDestination.text =
             "${destination.city}, ${destination.country}"
 
@@ -80,7 +75,6 @@ class BookingSuccessFragment : Fragment() {
         binding.confirmationLBLPrice.text =
             "${destination.flightPrice}$"
 
-        // Passenger info
         binding.confirmationLBLPassengerName.text =
             "$firstName $lastName"
 
@@ -88,21 +82,17 @@ class BookingSuccessFragment : Fragment() {
         binding.confirmationLBLPhone.text = phone
     }
 
-
-    private fun setupButtons() {
+    private fun setupButtons() {    // Handles the home button click
         binding.confirmationBTNHome.setOnClickListener {
             navigateToHome()
         }
     }
 
-    private fun navigateToHome() {
-        parentFragmentManager.popBackStack(
-            null,
-            FragmentManager.POP_BACK_STACK_INCLUSIVE
-
-        )
+    private fun navigateToHome() {   // Navigates back to the home screen safely
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.main_LAY_container, HomeFragment())
+            .commit()
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
